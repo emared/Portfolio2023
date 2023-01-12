@@ -16,7 +16,7 @@
 
 /*  ---  Site General  ---  */
 html{font-size:16px;}
-body{font-family: "Mulish", sans-serif; color: #fff; background-color:@black;}
+body{font-family: "Mulish", sans-serif; color: #fff; background-color:@black; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 h1, h2, h3, h4, h5, h6{font-family: 'Coign'; text-transform: uppercase;}
 h3{font-size: 2rem;}
 p{font-size: 1rem; color: #fff;}
@@ -66,7 +66,7 @@ a{text-decoration: none; color:#fff; transition: @transition;}
     .main_menu--container{
       ul{padding: 0; margin: 0;
         li{display: inline-block;
-          a{letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; padding: 8px 20px; font-size: 14px; transition: @transition;
+          a{letter-spacing: 3px; text-transform: uppercase; opacity: 0.7; padding: 8px 30px; font-size: 14px; transition: @transition;
             &:last-child{padding-right: 0;}
             &:hover{opacity: 1;}
             &:focus{opacity: 1;}
@@ -83,16 +83,16 @@ a{text-decoration: none; color:#fff; transition: @transition;}
 /*  ---  Landing Hero  ---  */
 .home_hero--wrapper{width: 100%; min-height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; flex-direction: row; justify-content: center;
   .hero_heading--container{position: relative; width: 100%;
-    .heading_title{width: 100%; max-width: 70vw; margin: 0 auto;
+    .heading_title{width: 100%; max-width: 70vw; margin: 0 auto; height: 100%;
       &.text{position: relative; z-index: 3;
         svg{display: block;}
       }
-      &.masks{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 2;
-        #letters {display: block;
+      &.mask{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 2;
+        #letters {display: block; width: 100%; height: 100%;
           .single_letter{display: block;}
         }
       }
-      &.gradient{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 1; max-width: 69.5vw; min-height: 99%;}
+      &.gradient{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 1; max-width: 69.5vw; height: 99%;}
     }
   }
 }
@@ -102,4 +102,8 @@ a{text-decoration: none; color:#fff; transition: @transition;}
   --gradient-color-2: #a1c4fd;
   --gradient-color-3: #ffecd2;
   --gradient-color-4: #fcb69f;
+}
+@keyframes rotation {
+		from {-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+		to {-webkit-transform: rotate(359deg); transform: rotate(359deg);}
 }
