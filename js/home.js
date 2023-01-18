@@ -1,6 +1,6 @@
-//
+// ********************************
 // Gradient waves
-//
+// ********************************
 //Converting colors to proper format
 function normalizeColor(hexCode) {
   return [(hexCode >> 16 & 255) / 255, (hexCode >> 8 & 255) / 255, (255 & hexCode) / 255]
@@ -499,9 +499,9 @@ var gradient = new Gradient();
     gradient.initGradient("#gradient-canvas");
 
 
-//
+// ********************************
 // Letters masks animation
-//
+// ********************************
 var mainTimeline = new TimelineMax();
 
 jQuery('#letters .single_letter').each(function(index){
@@ -509,4 +509,50 @@ jQuery('#letters .single_letter').each(function(index){
   // tl.from(jQuery(this), 0.6, { y: '0', ease: Power2.easeOut }, 0.1);
   tl.to(jQuery(this), 0.6, { y: '-100%', stagger:0.5, delay:0, ease: Power2.easeOut }, 0.1);
   mainTimeline.add(tl, '-=0.6');
+});
+
+
+// ********************************
+// Scroll triggers
+// ********************************
+gsap.to(".hero_heading--container", {
+  scale: 70,
+  x: "87%",
+  transformOrigin: "center center",
+  scrollTrigger: {
+    trigger: ".home_hero--wrapper",
+    start: "top top",
+    end: "+=150%",
+    scrub: .3,
+    pin: true,
+    // markers: true,
+    id: "letters"
+  }
+});
+gsap.to(".hero_text--container", {
+  y:20,
+  x:20,
+  opacity:0,
+  scrollTrigger: {
+    trigger: "#wrapper",
+    start: "top top",
+    end: 40,
+    scrub: true,
+    // markers: true,
+    id: "subtitle"
+  }
+});
+
+gsap.to(".circular_text--container", {
+  y:20,
+  x:-20,
+  opacity:0,
+  scrollTrigger: {
+    trigger: "#wrapper",
+    start: "top top",
+    end: 40,
+    scrub: true,
+    // markers: true,
+    id: "circular text"
+  }
 });

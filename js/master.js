@@ -1,6 +1,26 @@
-//
+// ********************************
+// Barba.js basic transiion
+// ********************************
+// barba.init({
+//   transitions: [{
+//     name: 'opacity-transition',
+//     leave(data) {
+//       return gsap.to(data.current.container, {
+//         opacity: 0
+//       });
+//     },
+//     enter(data) {
+//       return gsap.from(data.next.container, {
+//         opacity: 0
+//       });
+//     }
+//   }]
+// });
+
+
+// ********************************
 // Lenis smooth scrolling
-//
+// ********************************
 const lenis = new Lenis({
   duration: 1.5,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
@@ -22,20 +42,57 @@ function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
-
 requestAnimationFrame(raf);
 
 
-//
+// ********************************
 // Initialize scroll trigger
-//
+// ********************************
 gsap.registerPlugin(ScrollTrigger);
 
 
-//
+// ********************************
+// Mobile screen 100vh fix
+// ********************************
+$(document).ready(function(){
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  //$('.btn-hamburger').click(function(){
+  //  let vh = window.innerHeight * 0.01;
+  //  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  //});
+});
+
+
+// ********************************
+// Mobile check
+// ********************************
+function isTouchScreendevice() {
+  return 'ontouchstart' in window || navigator.maxTouchPoints;
+};
+if(isTouchScreendevice()){
+  $('#wrapper').addClass('touch');
+  $('#wrapper').removeClass('no-touch');
+} else {
+  $('#wrapper').removeClass('touch');
+  $('#wrapper').addClass('no-touch');
+}
+$(window).resize(function() {
+  if(isTouchScreendevice()){
+     $('#wrapper').addClass('touch');
+     $('#wrapper').removeClass('no-touch');
+  } else {
+     $('#wrapper').removeClass('touch');
+     $('#wrapper').addClass('no-touch');
+  }
+});
+
+
+// ********************************
 // Custom cursor
-//
-var cursor = jQuery(".cursor__pointer");
+// ********************************
+var cursor = $(".cursor"),
+    follower = $(".cursor__pointer");
 var posX = 0,
     posY = 0;
 var mouseX = 0,
@@ -46,16 +103,24 @@ TweenMax.to({}, 0.016, {
   onRepeat: function() {
     posX += (mouseX - posX) / 9;
     posY += (mouseY - posY) / 9;
-
-    TweenMax.set(cursor, {
+    TweenMax.set(follower, {
         css: {
         left: posX - 12,
         top: posY - 12
         }
     });
+    TweenMax.set(cursor, {
+        css: {
+        left: mouseX,
+        top: mouseY
+        }
+    });
   }
 });
-
+$(document).on("mousemove", function(e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+});
 jQuery(document).on("mousemove", function(e) {
     mouseX = e.pageX;
     mouseY = e.pageY;
@@ -68,45 +133,52 @@ jQuery(document).ready(function(){
   });
 });
 jQuery(document).ready(function(){
-  jQuery( ".apg-grid-item" ).hover(function() {
+  jQuery( ".single_project" ).hover(function() {
+    jQuery(".cursor").toggleClass( "active_projects" );
+  });
+});
+jQuery(document).ready(function(){
+  jQuery( ".single_project" ).hover(function() {
     jQuery(".cursor__pointer").toggleClass( "active_projects" );
   });
 });
 
 
-//
+// ********************************
 // Magnetic menu items
-//
+// ********************************
 jQuery(".menu-item").addClass("magnetic");
 jQuery(".menu-item a").addClass("link");
 
 var magnets = document.querySelectorAll('.magnetic')
 var strength = 25
 
-magnets.forEach( (magnet) => {
-  magnet.addEventListener('mousemove', moveMagnet );
-  magnet.addEventListener('mouseout', function(event) {
-    TweenMax.to( event.currentTarget, 1, {x: 0, y: 0, ease: Power4.easeOut})
-  } );
-});
+if(window.innerWidth > 540){
+  magnets.forEach( (magnet) => {
+    magnet.addEventListener('mousemove', moveMagnet );
+    magnet.addEventListener('mouseout', function(event) {
+      TweenMax.to( event.currentTarget, 1, {x: 0, y: 0, ease: Power4.easeOut})
+    } );
+  });
 
-function moveMagnet(event) {
-  var magnetButton = event.currentTarget
-  var bounding = magnetButton.getBoundingClientRect()
+  function moveMagnet(event) {
+    var magnetButton = event.currentTarget
+    var bounding = magnetButton.getBoundingClientRect()
 
-  //console.log(magnetButton, bounding)
+    //console.log(magnetButton, bounding)
 
-  TweenMax.to( magnetButton, 1, {
-    x: ((( event.clientX - bounding.left)/magnetButton.offsetWidth) - 0.5) * strength,
-    y: ((( event.clientY - bounding.top)/magnetButton.offsetHeight) - 0.5) * strength,
-    ease: Power4.easeOut
-  })
+    TweenMax.to( magnetButton, 1, {
+      x: ((( event.clientX - bounding.left)/magnetButton.offsetWidth) - 0.5) * strength,
+      y: ((( event.clientY - bounding.top)/magnetButton.offsetHeight) - 0.5) * strength,
+      ease: Power4.easeOut
+    })
+  }
 }
 
 
-//
+// ********************************
 // Lottie logo
-//
+// ********************************
 /* let containerLogo = document.getElementById('logo_lottie');
 let logoAnimation;
 let animationCompleted = true;
@@ -132,9 +204,9 @@ containerLogo.addEventListener("mouseover", () => {
 });*/
 
 
-//
+// ********************************
 // Sticky header
-//
+// ********************************
 (function($) {
   var prev = 0;
   var $window = $(window);
@@ -153,3 +225,74 @@ containerLogo.addEventListener("mouseover", () => {
   });
 
 })(jQuery);
+
+
+// ********************************
+// Scroll triggers
+// ********************************
+
+// Reveal text when in viewport - Characters
+var mySplitText = new SplitText(".custom-split-text__reveal", {type:"words,chars", wordsClass:"word"})
+var chars = mySplitText.chars;
+
+var splitTextElements = gsap.utils.toArray('.custom-split-text__reveal');
+splitTextElements.forEach((element) => {
+  gsap.to(element.querySelectorAll('.word div'), {
+    duration: 0.8,
+    y:0,
+    ease:Power4.easeOut,
+    stagger: element.dataset.stagger,
+    delay: element.dataset.delay,
+    scrollTrigger: {
+      trigger: element,
+      start: "top 80%",
+      toggleActions: "play none none none"
+      // markers: true,
+      // id: "reveal",
+    }
+  });
+});
+
+
+// ********************************
+// Project title
+// ********************************
+const letterWrapClass = 'letter-wrap';
+const letterWrapElements = document.getElementsByClassName(letterWrapClass);
+[...letterWrapElements].forEach(el => {
+  letterWrap(el, letterWrapClass);
+  letterAnimation(el, letterWrapClass);
+});
+function letterWrap(el, cls) {
+  const words = el.textContent.split(' ');
+  const letters = [];
+  cls = cls || 'letter-wrap'
+  words.forEach(word => {
+    let html = '';
+    for (var letter in word) {
+      html += `
+        <span class="${cls}__char">
+          <span class="${cls}__char-inner" data-letter="${word[letter]}">
+            ${word[letter]}
+          </span>
+        </span>
+      `;
+    };
+    let wrappedWords = `<span class="${cls}__word">${html}</span>`;
+    letters.push(wrappedWords);
+  });
+  return el.innerHTML = letters.join(' ');
+}
+function letterAnimation(el, cls) {
+  const tl = new TimelineMax({ paused: true });
+  const characters = el.querySelectorAll(`.${cls}__char-inner`);
+  const duration = el.hasAttribute('data-duration') ? el.dataset.duration : 0.3;
+  const stagger = el.hasAttribute('data-stagger') ? el.dataset.stagger : 0.02;
+  el.animation = tl.staggerTo(characters, duration, {
+    y: '-100%',
+    delay: 0.1,
+    ease: Power2.easeOut
+  }, stagger);
+  el.addEventListener('mouseenter', (event) => event.currentTarget.animation.play());
+  el.addEventListener('mouseout', (event) => el.animation.reverse());
+}
