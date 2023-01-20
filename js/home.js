@@ -556,3 +556,41 @@ gsap.to(".circular_text--container", {
     id: "circular text"
   }
 });
+
+
+// ********************************
+// Single project animation
+// ********************************
+$(".single_project").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this).prev();
+  let projectCards = gsap.timeline({
+
+  scrollTrigger: {
+      trigger: triggerElement,
+      start: "top 75%",
+      end: "top top",
+      scrub: true,
+      //markers: true,
+      id: "conceal"
+    }
+  });
+  projectCards.fromTo(
+    targetElement,
+    {
+      scale: 1,
+      opacity: 1
+    },
+    {
+     	scale: 0.8,
+      opacity: 0
+    })
+  projectCards.fromTo(
+    triggerElement,
+    {
+      boxShadow: '0rem 0rem 0rem 0rem rgba(0,0,0,0)',
+    },
+    {
+      boxShadow: '0rem -4rem 10rem 0rem rgba(0,0,0,0.25)',
+    })
+});

@@ -19,36 +19,30 @@
 
 
 // ********************************
-// Lenis smooth scrolling
-// ********************************
-const lenis = new Lenis({
-  duration: 1.5,
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-  direction: "vertical", // vertical, horizontal
-  gestureDirection: "vertical", // vertical, horizontal, both
-  smooth: true,
-  mouseMultiplier: 1,
-  smoothTouch: false,
-  touchMultiplier: 2,
-  infinite: false
-});
-
-//get scroll value
-/* lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-  console.log({ scroll, limit, velocity, direction, progress });
-}); */
-
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
-
-
-// ********************************
 // Initialize scroll trigger
 // ********************************
 gsap.registerPlugin(ScrollTrigger);
+
+
+// ********************************
+// Lenis smooth scrolling
+// ********************************
+let lenis;
+// Initialize Lenis smooth scrolling
+const initSmoothScrolling = () => {
+    lenis = new Lenis({
+		lerp: 0.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+		smooth: true
+	});
+    lenis.on('scroll', () => ScrollTrigger.update());
+	const scrollFn = (time) => {
+		lenis.raf(time);
+		requestAnimationFrame(scrollFn);
+	};
+    requestAnimationFrame(scrollFn);
+};
+initSmoothScrolling();
 
 
 // ********************************
@@ -232,67 +226,49 @@ containerLogo.addEventListener("mouseover", () => {
 // ********************************
 
 // Reveal text when in viewport - Characters
-var mySplitText = new SplitText(".custom-split-text__reveal", {type:"words,chars", wordsClass:"word"})
-var chars = mySplitText.chars;
+jQuery(document).ready(function(){
+  const mySplitText = new SplitText(".custom-split-text__reveal", {type:"words,chars", wordsClass:"word"})
+  const chars = mySplitText.chars;
 
-var splitTextElements = gsap.utils.toArray('.custom-split-text__reveal');
-splitTextElements.forEach((element) => {
-  gsap.to(element.querySelectorAll('.word div'), {
-    duration: 0.8,
-    y:0,
-    ease:Power4.easeOut,
-    stagger: element.dataset.stagger,
-    delay: element.dataset.delay,
-    scrollTrigger: {
-      trigger: element,
-      start: "top 80%",
-      toggleActions: "play none none none"
-      // markers: true,
-      // id: "reveal",
-    }
+  const splitTextElements = gsap.utils.toArray('.custom-split-text__reveal');
+  splitTextElements.forEach((element) => {
+    gsap.to(element.querySelectorAll('.word div'), {
+      duration: 0.8,
+      y:0,
+      ease:Power4.easeOut,
+      stagger: element.dataset.stagger,
+      delay: element.dataset.delay,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        toggleActions: "play none none none",
+        //markers: true,
+        //id: "reveal",
+      }
+    });
   });
 });
 
+// Reveal text when in viewport - Words
+jQuery(document).ready(function(){
+  const mySplitText2 = new SplitText(".custom-split-text__reveal2", {type:"words,lines", linesClass:"line"})
+  const chars2 = mySplitText2.words;
 
-// ********************************
-// Project title
-// ********************************
-const letterWrapClass = 'letter-wrap';
-const letterWrapElements = document.getElementsByClassName(letterWrapClass);
-[...letterWrapElements].forEach(el => {
-  letterWrap(el, letterWrapClass);
-  letterAnimation(el, letterWrapClass);
-});
-function letterWrap(el, cls) {
-  const words = el.textContent.split(' ');
-  const letters = [];
-  cls = cls || 'letter-wrap'
-  words.forEach(word => {
-    let html = '';
-    for (var letter in word) {
-      html += `
-        <span class="${cls}__char">
-          <span class="${cls}__char-inner" data-letter="${word[letter]}">
-            ${word[letter]}
-          </span>
-        </span>
-      `;
-    };
-    let wrappedWords = `<span class="${cls}__word">${html}</span>`;
-    letters.push(wrappedWords);
+  const splitTextElements2 = gsap.utils.toArray('.custom-split-text__reveal2');
+  splitTextElements2.forEach((element) => {
+    gsap.to(element.querySelectorAll('.line div'), {
+      duration: 0.8,
+      y:0,
+      ease:Power4.easeOut,
+      stagger: element.dataset.stagger,
+      delay: element.dataset.delay,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        toggleActions: "play none none none",
+        //markers: true,
+        //id: "reveal"
+      }
+    });
   });
-  return el.innerHTML = letters.join(' ');
-}
-function letterAnimation(el, cls) {
-  const tl = new TimelineMax({ paused: true });
-  const characters = el.querySelectorAll(`.${cls}__char-inner`);
-  const duration = el.hasAttribute('data-duration') ? el.dataset.duration : 0.3;
-  const stagger = el.hasAttribute('data-stagger') ? el.dataset.stagger : 0.02;
-  el.animation = tl.staggerTo(characters, duration, {
-    y: '-100%',
-    delay: 0.1,
-    ease: Power2.easeOut
-  }, stagger);
-  el.addEventListener('mouseenter', (event) => event.currentTarget.animation.play());
-  el.addEventListener('mouseout', (event) => el.animation.reverse());
-}
+});
