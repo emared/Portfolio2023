@@ -62,6 +62,17 @@ a{text-decoration: none; color:#fff; transition: @transition;}
   .inner--container{max-width: 1290px; width: 100%; padding: 0 20px}
 }
 
+/*  ---  Custom buttons  ---  */
+.lovely_button {font-size:16px; text-transform:uppercase; background-color:#000; padding:15px 30px; border-radius:99px; position:relative; display: inline-block; transition: all .5s cubic-bezier(.77,0,.175,1);
+  .text{color:#fff; padding-left:30px; position:relative; z-index:5; transition: all .5s cubic-bezier(.77,0,.175,1);}
+  &::before{content:''; background-color:#c2e9fb; width:20px; height:20px; display:block; position:absolute; z-index:1; border-radius:99px; top:50%; left:20px; transform:translateY(-50%); transition: all .5s cubic-bezier(.77,0,.175,1);}
+
+  &:hover{
+    .text{color:#000; padding-left:15px; padding-right:15px;}
+    &::before{content:''; width:100%; height:100%; left:0;}
+  }
+}
+
 /*  ---  HEADER  ---  */
 /*  ---  General  ---  */
 #header{width:100%; padding: 35px 50px 0; position: fixed; top:0; left:0; transition: ease transform 0.3s; z-index: 9999;
@@ -179,6 +190,19 @@ a{text-decoration: none; color:#fff; transition: @transition;}
       }
     }
   }
+  .portfolio_trigger{display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; pointer-events: none;}
+  .portfolio_scrollable--container{
+    .scrollable_text{position: absolute; top: 0; left: 0px; display: block; text-align: center; text-transform: uppercase; letter-spacing: 6px; font-weight: 700; transform: rotate(-90deg) translateX(-50%); transform-origin: top left; padding-top: 70px; will-change: transform;
+      p{font-size: 14px;}
+    }
+    .scrollable_timeline{position: absolute; top: 0; right: 0px; display: block; padding-top: 70px; transform: rotate(90deg);
+      .progress{width:170px; height: 1px; display: block; background-color: #fff; position: relative;
+        &.bar{z-index: 2;}
+        &.background{opacity: 0.2; margin-top: -1px; z-index: 1;}
+      }
+    }
+  }
+  .pin-spacer-scrollable{pointer-events: none;}
 }
 /*  ---  Portfolio letter wrap effect  ---  */
 .letter-wrap {display: inline-block; position: relative;

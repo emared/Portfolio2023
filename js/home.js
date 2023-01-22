@@ -513,7 +513,7 @@ jQuery('#letters .single_letter').each(function(index){
 
 
 // ********************************
-// Scroll triggers
+// Scroll triggers landing
 // ********************************
 gsap.to(".hero_heading--container", {
   scale: 70,
@@ -593,4 +593,35 @@ $(".single_project").each(function (index) {
     {
       boxShadow: '0rem -4rem 10rem 0rem rgba(0,0,0,0.25)',
     })
+});
+
+
+// ********************************
+// Scrollable content portfolio
+// ********************************
+jQuery(document).ready(function(){
+  let scrollableContainer = document.querySelector(".portfolio_scrollable--container");
+  let scrollableTrigger = document.querySelector(".portfolio_trigger");
+  let scrollableBar = document.querySelector(".progress.bar");
+  let scrollableTimeline = gsap.timeline({
+
+  scrollTrigger: {
+      trigger: scrollableTrigger,
+      start: "top center",
+      end: "bottom center",
+      scrub: true,
+      pin: true,
+      // markers: true,
+      id: "scrollable"
+    }
+  });
+  scrollableTimeline.fromTo(
+    scrollableBar,
+    {
+      scaleX:0,
+    },
+    {
+     	scaleX:1,
+    })
+
 });
