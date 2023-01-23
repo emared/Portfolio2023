@@ -222,7 +222,21 @@ containerLogo.addEventListener("mouseover", () => {
 
 
 // ********************************
-// Scroll triggers
+// Video safari support
+// ********************************
+function supportsHEVCAlpha() {
+  const navigator = window.navigator;
+  const ua = navigator.userAgent.toLowerCase()
+  const hasMediaCapabilities = !!(navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo)
+  const isSafari = ((ua.indexOf('safari') != -1) && (!(ua.indexOf('chrome')!= -1) && (ua.indexOf('version/')!= -1)))
+  return isSafari && hasMediaCapabilities
+}
+const player = document.getElementById('cta_video');
+player.src = supportsHEVCAlpha() ? 'assets/videos/maneki_neko.mov' : 'assets/videos/maneki_neko.webm';
+
+
+// ********************************
+// Scroll triggers - Reveal
 // ********************************
 
 // Reveal text when in viewport - Characters
@@ -271,4 +285,56 @@ jQuery(document).ready(function(){
       }
     });
   });
+});
+
+
+// ********************************
+// Scroll triggers - Fade
+// ********************************
+jQuery(document).ready(function(){
+  const fadeUp = gsap.utils.toArray('[fade-up]');
+  fadeUp.forEach((element) => {
+    gsap.to(element, {
+      opacity: 1,
+      y:0,
+      ease:Power1.ease,
+      delay: element.dataset.delay,
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        toggleActions: "play none none none",
+        //markers: true,
+        id: "fade"
+      }
+    });
+  });
+});
+
+// ********************************
+// Scroll triggers - CTA Reveal
+// ********************************
+jQuery(document).ready(function(){
+  let ctaContainer = document.querySelector(".cta_footer--container");;
+  let ctaTimeline = gsap.timeline({
+
+  scrollTrigger: {
+      trigger: ctaContainer,
+      start: "top 80%",
+      //end: "+=100%",
+      end: "bottom bottom",
+      scrub: true,
+      //markers: true,
+      id: "cta reveal"
+    }
+  });
+  ctaTimeline.fromTo(
+    ctaContainer,
+    {
+      y: -250,
+      opacity: 1
+    },
+    {
+     	y: 0,
+      opacity: 1
+    })
 });

@@ -506,7 +506,6 @@ var mainTimeline = new TimelineMax();
 
 jQuery('#letters .single_letter').each(function(index){
   var tl = new TimelineMax();
-  // tl.from(jQuery(this), 0.6, { y: '0', ease: Power2.easeOut }, 0.1);
   tl.to(jQuery(this), 0.6, { y: '-100%', stagger:0.5, delay:0, ease: Power2.easeOut }, 0.1);
   mainTimeline.add(tl, '-=0.6');
 });
