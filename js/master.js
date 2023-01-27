@@ -104,10 +104,10 @@ TweenMax.to({}, 0.016, {
         }
     });
     TweenMax.set(cursor, {
-        css: {
-        left: mouseX,
-        top: mouseY
-        }
+      css: {
+      left: posX - 2,
+      top: posY - 2
+      }
     });
   }
 });
@@ -236,79 +236,114 @@ player.src = supportsHEVCAlpha() ? 'assets/videos/maneki_neko.mov' : 'assets/vid
 
 
 // ********************************
-// Scroll triggers - Reveal
+// Scroll trigger - Global Animations
 // ********************************
 
-// Reveal text when in viewport - Characters
 jQuery(document).ready(function(){
-  const mySplitText = new SplitText(".custom-split-text__reveal", {type:"words,chars", wordsClass:"word"})
-  const chars = mySplitText.chars;
 
-  const splitTextElements = gsap.utils.toArray('.custom-split-text__reveal');
-  splitTextElements.forEach((element) => {
-    gsap.to(element.querySelectorAll('.word div'), {
-      duration: 0.8,
-      y:0,
-      ease:Power4.easeOut,
-      stagger: element.dataset.stagger,
-      delay: element.dataset.delay,
-      scrollTrigger: {
-        trigger: element,
-        start: "top 80%",
-        toggleActions: "play none none none",
-        //markers: true,
-        //id: "reveal",
-      }
+	// Fade
+	const fade = gsap.utils.toArray("[data-animation='fade']");
+	fade.forEach((element) => {
+		gsap.to(element, {
+		opacity: 1,
+		ease:Power1.ease,
+		delay: element.dataset.delay,
+		scrollTrigger: {
+			trigger: element,
+			start: "top 80%",
+			toggleActions: "play none none none",
+			//markers: true,
+			id: "fade"
+		}
+		});
+	});
+
+	// Fade up
+	const fadeUp = gsap.utils.toArray("[data-animation='fade-up']");
+	fadeUp.forEach((element) => {
+		gsap.to(element, {
+		opacity: 1,
+		y:0,
+		ease:Power1.ease,
+		delay: element.dataset.delay,
+		scrollTrigger: {
+			trigger: element,
+			start: "top 80%",
+			toggleActions: "play none none none",
+			//markers: true,
+			id: "fade up"
+		}
+		});
+	});
+
+	// Fade down
+	const fadeDown = gsap.utils.toArray("[data-animation='fade-down']");
+	fadeDown.forEach((element) => {
+		gsap.to(element, {
+		opacity: 1,
+		y:0,
+		ease:Power1.ease,
+		delay: element.dataset.delay,
+		scrollTrigger: {
+			trigger: element,
+			start: "top 80%",
+			toggleActions: "play none none none",
+			//markers: true,
+			id: "fade up"
+		}
+		});
+	});
+
+	// Characters reveal
+  jQuery(document).ready(function(){
+    const mySplitText = new SplitText("[data-animation='chars']", {type:"words,chars", wordsClass:"word"})
+    const chars = mySplitText.chars;
+
+    const splitTextElements = gsap.utils.toArray("[data-animation='chars']");
+    splitTextElements.forEach((element) => {
+      gsap.to(element.querySelectorAll('.word div'), {
+        duration: 0.8,
+        y:0,
+        ease:Power4.easeOut,
+        stagger: element.dataset.stagger,
+        delay: element.dataset.delay,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          //markers: true,
+          //id: "reveal",
+        }
+      });
     });
   });
-});
 
-// Reveal text when in viewport - Words
-jQuery(document).ready(function(){
-  const mySplitText2 = new SplitText(".custom-split-text__reveal2", {type:"words,lines", linesClass:"line"})
-  const chars2 = mySplitText2.words;
+	// Words reveal
+  jQuery(document).ready(function(){
+    const mySplitText2 = new SplitText("[data-animation='words']", {type:"words,lines", linesClass:"line"})
+    const chars2 = mySplitText2.words;
 
-  const splitTextElements2 = gsap.utils.toArray('.custom-split-text__reveal2');
-  splitTextElements2.forEach((element) => {
-    gsap.to(element.querySelectorAll('.line div'), {
-      duration: 0.8,
-      y:0,
-      ease:Power4.easeOut,
-      stagger: element.dataset.stagger,
-      delay: element.dataset.delay,
-      scrollTrigger: {
-        trigger: element,
-        start: "top 80%",
-        toggleActions: "play none none none",
-        //markers: true,
-        //id: "reveal"
-      }
+    const splitTextElements2 = gsap.utils.toArray("[data-animation='words']");
+    splitTextElements2.forEach((element) => {
+      gsap.to(element.querySelectorAll('.line div'), {
+        duration: 0.8,
+        y:0,
+        ease:Power4.easeOut,
+        stagger: element.dataset.stagger,
+        delay: element.dataset.delay,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          toggleActions: "play none none none",
+          //markers: true,
+          //id: "reveal"
+        }
+      });
     });
   });
+
 });
 
-
-// ********************************
-// Scroll triggers - Fade
-// ********************************
-jQuery(document).ready(function(){
-  const fadeUp = gsap.utils.toArray('[fade-up]');
-  fadeUp.forEach((element) => {
-    gsap.to(element, {
-      opacity: 1,
-      y:0,
-      ease:Power1.ease,
-      delay: element.dataset.delay,
-      scrollTrigger: {
-        trigger: element,
-        start: "top 80%",
-        toggleActions: "play none none none",
-        //markers: true,
-        id: "fade"
-      }
-    });
-  });
-});
 
 // ********************************
 // Scroll triggers - CTA Reveal
