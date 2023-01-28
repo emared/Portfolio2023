@@ -294,6 +294,25 @@ jQuery(document).ready(function(){
 		});
 	});
 
+  // List child stagger reveal
+  const animatedList = gsap.utils.toArray("[data-animation='animated-list']");
+  animatedList.forEach((element) => {
+    gsap.to(element.querySelectorAll('li'), {
+    opacity: 1,
+    x:0,
+    ease:Power1.ease,
+    stagger: element.dataset.stagger,
+    delay: element.dataset.delay,
+    scrollTrigger: {
+      trigger: element,
+      start: "top 80%",
+      toggleActions: "play none none none",
+      //markers: true,
+      id: "animated list"
+    }
+    });
+  });
+
 	// Characters reveal
   jQuery(document).ready(function(){
     const mySplitText = new SplitText("[data-animation='chars']", {type:"words,chars", wordsClass:"word"})

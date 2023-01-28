@@ -54,29 +54,17 @@ $(".single_project").each(function (index) {
 
 
 
-const singleProjectConceal = gsap.utils.toArray('.single_project');
-singleProjectConceal.forEach((element) => {
-  gsap.to(element, {
-    scale: 0.8,
-    y:-20,
-    opacity: 0,
-    ease:Power4.easeOut,
-    scrollTrigger: {
-      trigger: element,
-      start: "bottom center",
-      scrub: true,
-      toggleActions: "play none none none",
-      markers: true,
-      id: "conceal"
-    }
-  });
-});
-
-
+// ********************************
+// Scrollable content portfolio
+// ********************************
 jQuery(document).ready(function(){
-  gsap.to(".portfolio_scrollable--container", {
-    scrollTrigger: {
-      trigger: ".portfolio_trigger",
+  let scrollableContainer = document.querySelector(".portfolio_scrollable--container");
+  let scrollableTrigger = document.querySelector(".portfolio_trigger");
+  let scrollableBar = document.querySelector(".progress.bar");
+  let scrollableTimeline = gsap.timeline({
+
+  scrollTrigger: {
+      trigger: scrollableTrigger,
       start: "top center",
       end: "bottom center",
       scrub: true,
@@ -85,16 +73,13 @@ jQuery(document).ready(function(){
       id: "scrollable"
     }
   });
-});
+  scrollableTimeline.fromTo(
+    scrollableBar,
+    {
+      scaleX:0,
+    },
+    {
+     	scaleX:1,
+    })
 
-gsap.from(".cta_footer--container", {
-  y: -150,
-  scrollTrigger: {
-    trigger: ".cta_footer--container",
-    start: "top top",
-    end: 100,
-    scrub: true,
-    markers: true,
-    id: "cta reveal"
-  }
 });

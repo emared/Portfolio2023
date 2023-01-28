@@ -600,7 +600,7 @@ $(".single_project").each(function (index) {
 // ********************************
 jQuery(document).ready(function(){
   let scrollableContainer = document.querySelector(".portfolio_scrollable--container");
-  let scrollableTrigger = document.querySelector(".portfolio_trigger");
+  let scrollableTrigger = document.querySelector(".home_portfolio--wrapper");
   let scrollableBar = document.querySelector(".progress.bar");
   let scrollableTimeline = gsap.timeline({
 
@@ -609,7 +609,7 @@ jQuery(document).ready(function(){
       start: "top center",
       end: "bottom center",
       scrub: true,
-      pin: true,
+      pin: scrollableContainer,
       // markers: true,
       id: "scrollable"
     }
