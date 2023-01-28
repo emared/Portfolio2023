@@ -83,6 +83,15 @@ $(window).resize(function() {
 
 
 // ********************************
+// Mobile menu click
+// ********************************
+$('.hamburger_btn').click(function() {
+	$('body').toggleClass('nav-active');
+	$(this).toggleClass('open');
+});
+
+
+// ********************************
 // Custom cursor
 // ********************************
 var cursor = $(".cursor"),
