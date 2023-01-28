@@ -370,21 +370,22 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 .footer--wrapper{padding: 0 50px 50px; width: 100%; display: flex; align-items: flex-end; justify-content: space-evenly; margin-top: -80px; position: relative; z-index: 2;
   .col{width: 25%; font-size: 14px; line-height: 1.5;
     .other-links {text-align: center;
-      a{letter-spacing: 3px; text-transform: uppercase; font-weight: 700; opacity: .7; padding: 0 5px;
+      a{letter-spacing: 3px; text-transform: uppercase; font-weight: 700; padding: 0 5px;
         &:hover{opacity: 1}
       }
       &:hover a:not(:hover){opacity: .3}
     }
+    &:nth-child(1){opacity: .6;}
     &:nth-child(2){width: 50%}
-    &:nth-child(3){text-align: right;}
+    &:nth-child(3){text-align: right; opacity: .6;}
   }
 }
-@media screen and (max-width: 10300px) {
+@media screen and (max-width: 1030px) {
   .footer--wrapper{ flex-wrap: wrap;
     .col{
       &:nth-child(1){display: none;}
       &:nth-child(2){width: 100%;}
-      &:nth-child(3){width: 100%; text-align: center; padding-top: 30px; opacity: .6;}
+      &:nth-child(3){width: 100%; text-align: center; padding-top: 30px;}
     }
   }
 }
