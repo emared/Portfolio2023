@@ -17,6 +17,7 @@
 /*  ---  Site General  ---  */
 html{font-size:16px;}
 body{font-family: "Mulish", sans-serif; color: #fff; background-color:@black; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden;}
+body.nav-active{overflow: hidden;}
 h1, h2, h3, h4, h5, h6{font-family: 'Coign'; text-transform: uppercase;}
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {margin: 0; padding: 0; border: 0; vertical-align: baseline;}
 p{font-size: 1rem; color: #fff;}
@@ -148,7 +149,7 @@ a{text-decoration: none; color:#fff; transition: @transition;}
 }
 
 /*  ---  MOBILE MENU  ---  */
-.mobile_menu--wrapper{position: fixed; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none;
+.mobile_menu--wrapper{position: fixed; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; z-index: 999;
   .overlay{background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, #000 40%); opacity: 0; transition: opacity .8s cubic-bezier(.7, 0, .2, 1); z-index: 100; pointer-events: none; will-change: opacity; position: absolute; top: 0; left: 0; height: 100%; width: 100%;}
   .mobile_menu--container {width: 85%; position: fixed; right: 0; top: 0; height: 100vh; background: @black; z-index: 100; transition: transform .8s cubic-bezier(.7, 0, .2, 1); will-change: transform; transform: translateX(100%);
     .inner{padding: 0 70px 0 75px; display: flex; flex-direction: column; justify-content: center; height: 100%;

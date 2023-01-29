@@ -87,6 +87,7 @@ $(window).resize(function() {
 // ********************************
 $('.hamburger_btn').click(function() {
 	$('body').toggleClass('nav-active');
+  // lenis.stop()
 	$(this).toggleClass('open');
 });
 
