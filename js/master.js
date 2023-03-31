@@ -31,9 +31,9 @@ let lenis;
 // Initialize Lenis smooth scrolling
 const initSmoothScrolling = () => {
     lenis = new Lenis({
-		lerp: 0.2,
+		lerp: 0.08,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-		smooth: true
+		smoothWheel: true
 	});
     lenis.on('scroll', () => ScrollTrigger.update());
 	const scrollFn = (time) => {

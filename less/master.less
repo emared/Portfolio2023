@@ -20,7 +20,7 @@ body{font-family: "Mulish", sans-serif; color: #fff; background-color:@black; -w
 body.nav-active{overflow: hidden;}
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {margin: 0; padding: 0; border: 0; vertical-align: baseline;}
 h1, h2{font-family: 'Coign'; text-transform: uppercase; color: #fff;}
-h3{font-family: "Mulish",sans-serif; letter-spacing: 8px; margin-bottom: 40px; color: #fff; text-transform: uppercase;}
+h3{font-family: "Mulish",sans-serif; letter-spacing: 8px; margin-bottom: 40px; color: #fff; text-transform: uppercase; font-size: 16px;}
 p{font-size: 1rem; color: #bcbcbc;}
 *{box-sizing: border-box;}
 .noscroll {overflow: hidden;}
@@ -405,12 +405,24 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 }
 
 /*  ---  ABOUT PAGE  ---  */
-.about_intro--wrapper .inner--container .grid{padding-top: 100px; padding-bottom: 230px;
+.about_intro--wrapper .inner--container .grid{padding-top: 120px; padding-bottom: 300px;
     h1{font-size:220px; line-height: 0.8; grid-column: e("1 / 13"); margin-bottom: 40px;}
     .size-20{grid-column: e("2 / 7");}
 }
-.about_text--wrapper .inner--container .grid{padding-bottom: 150px;
+.about_text--wrapper .inner--container .grid{padding-bottom: 250px;
     h3{grid-column: e("2 / 11");}
     .big-text{grid-column: e("2 / 11"); margin-bottom: 40px;}
     .size-20{grid-column: e("2 / 9");}
+}
+.about_resume--wrapper .inner--container .grid{padding-top: 100px; padding-bottom: 300px;
+    > div{grid-column: e("7 / 13");}
+    .resume{list-style-type: none;
+        li{padding: 30px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-end; justify-content: space-between; color: #bcbcbc; font-size: 18px; line-height: 1.5;
+            &:last-child{border-bottom-width: 0;}
+            span{display:block; width: 100%;
+                &:nth-child(1){color: #fff;}
+            }
+        }
+    }
+    .btn-container{text-align: right;}
 }
