@@ -59,6 +59,32 @@ $(document).ready(function(){
 
 
 // ********************************
+// Check browser
+// ********************************
+function fnBrowserDetect(){
+                 
+    let userAgent = navigator.userAgent;
+    let browserName;
+    
+    if(userAgent.match(/chrome|chromium|crios/i)){
+        browserName = "chrome";
+      }else if(userAgent.match(/firefox|fxios/i)){
+        browserName = "firefox";
+      }  else if(userAgent.match(/safari/i)){
+        browserName = "safari";
+      }else if(userAgent.match(/opr\//i)){
+        browserName = "opera";
+      } else if(userAgent.match(/edg/i)){
+        browserName = "edge";
+      }else{
+        browserName="No browser detection";
+      }
+    
+     document.querySelector("html").classList.add(browserName);         
+}
+
+
+// ********************************
 // Mobile check
 // ********************************
 function isTouchScreendevice() {
@@ -242,7 +268,13 @@ function supportsHEVCAlpha() {
   return isSafari && hasMediaCapabilities
 }
 const player = document.getElementById('cta_video');
-player.src = supportsHEVCAlpha() ? 'assets/videos/maneki_neko.mov' : 'assets/videos/maneki_neko.webm';
+if($(player).length >0 ){
+    player.src = supportsHEVCAlpha() ? 'assets/videos/maneki_neko.mov' : 'assets/videos/maneki_neko.webm';
+}
+const player2 = document.getElementById('gyro');
+if($(player2).length >0 ){
+    player2.src = supportsHEVCAlpha() ? 'assets/videos/gyro.mov' : 'assets/videos/gyro.webm';
+}
 
 
 // ********************************
