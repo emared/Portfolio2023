@@ -80,7 +80,7 @@ function fnBrowserDetect(){
         browserName="No browser detection";
       }
     
-     document.querySelector("html").classList.add(browserName);         
+    document.querySelector("html").classList.add(browserName);         
 }
 
 
@@ -88,23 +88,23 @@ function fnBrowserDetect(){
 // Mobile check
 // ********************************
 function isTouchScreendevice() {
-  return 'ontouchstart' in window || navigator.maxTouchPoints;
+    return 'ontouchstart' in window || navigator.maxTouchPoints;
 };
 if(isTouchScreendevice()){
-  $('#wrapper').addClass('touch');
-  $('#wrapper').removeClass('no-touch');
+    $('#wrapper').addClass('touch');
+    $('#wrapper').removeClass('no-touch');
 } else {
-  $('#wrapper').removeClass('touch');
-  $('#wrapper').addClass('no-touch');
+    $('#wrapper').removeClass('touch');
+    $('#wrapper').addClass('no-touch');
 }
 $(window).resize(function() {
-  if(isTouchScreendevice()){
-     $('#wrapper').addClass('touch');
-     $('#wrapper').removeClass('no-touch');
-  } else {
-     $('#wrapper').removeClass('touch');
-     $('#wrapper').addClass('no-touch');
-  }
+    if(isTouchScreendevice()){
+        $('#wrapper').addClass('touch');
+        $('#wrapper').removeClass('no-touch');
+    } else {
+        $('#wrapper').removeClass('touch');
+        $('#wrapper').addClass('no-touch');
+    }
 });
 
 
@@ -158,19 +158,29 @@ jQuery(document).on("mousemove", function(e) {
 
 // Add classes to cursor
 jQuery(document).ready(function(){
-  jQuery( ".link" ).hover(function() {
-    jQuery(".cursor__pointer").toggleClass( "active" );
-  });
+    jQuery( ".link" ).hover(function() {
+        jQuery(".cursor__pointer").toggleClass( "active" );
+    });
 });
 jQuery(document).ready(function(){
-  jQuery( ".single_project" ).hover(function() {
-    jQuery(".cursor").toggleClass( "active_projects" );
-  });
+    jQuery( ".single_project" ).hover(function() {
+        jQuery(".cursor").toggleClass( "active_projects" );
+    });
 });
 jQuery(document).ready(function(){
-  jQuery( ".single_project" ).hover(function() {
-    jQuery(".cursor__pointer").toggleClass( "active_projects" );
-  });
+    jQuery( ".single_project" ).hover(function() {
+        jQuery(".cursor__pointer").toggleClass( "active_projects" );
+    });
+});
+jQuery(document).ready(function(){
+    jQuery( ".grid_playground > .single" ).hover(function() {
+        jQuery(".cursor").toggleClass( "active_playground" );
+    });
+});
+jQuery(document).ready(function(){
+    jQuery( ".grid_playground > .single" ).hover(function() {
+        jQuery(".cursor__pointer").toggleClass( "active_playground" );
+    });
 });
 
 
@@ -238,21 +248,21 @@ containerLogo.addEventListener("mouseover", () => {
 // Sticky header
 // ********************************
 (function($) {
-  var prev = 0;
-  var $window = $(window);
-  var nav = $('#header');
+    var prev = 0;
+    var $window = $(window);
+    var nav = $('#header');
 
-  $window.on('scroll', function(){
-	var scrollTop = $window.scrollTop();
-	nav.toggleClass('hide-navbar', scrollTop > prev);
-	prev = scrollTop;
-  });
+    $window.on('scroll', function(){
+        var scrollTop = $window.scrollTop();
+        nav.toggleClass('hide-navbar', scrollTop > prev);
+        prev = scrollTop;
+    });
 
-  $(window).scroll(function() {
-	  if ($(this).scrollTop() <= 300) {
-		  $('#header').removeClass('hide-navbar');
-	  }
-  });
+    $(window).scroll(function() {
+        if ($(this).scrollTop() <= 300) {
+            $('#header').removeClass('hide-navbar');
+        }
+    });
 
 })(jQuery);
 
@@ -261,11 +271,11 @@ containerLogo.addEventListener("mouseover", () => {
 // Video safari support
 // ********************************
 function supportsHEVCAlpha() {
-  const navigator = window.navigator;
-  const ua = navigator.userAgent.toLowerCase()
-  const hasMediaCapabilities = !!(navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo)
-  const isSafari = ((ua.indexOf('safari') != -1) && (!(ua.indexOf('chrome')!= -1) && (ua.indexOf('version/')!= -1)))
-  return isSafari && hasMediaCapabilities
+    const navigator = window.navigator;
+    const ua = navigator.userAgent.toLowerCase()
+    const hasMediaCapabilities = !!(navigator.mediaCapabilities && navigator.mediaCapabilities.decodingInfo)
+    const isSafari = ((ua.indexOf('safari') != -1) && (!(ua.indexOf('chrome')!= -1) && (ua.indexOf('version/')!= -1)))
+    return isSafari && hasMediaCapabilities
 }
 const player = document.getElementById('cta_video');
 if($(player).length >0 ){
@@ -336,72 +346,72 @@ jQuery(document).ready(function(){
 		});
 	});
 
-  // List child stagger reveal
-  const animatedList = gsap.utils.toArray("[data-animation='animated-list']");
-  animatedList.forEach((element) => {
-    gsap.to(element.querySelectorAll('li'), {
-    opacity: 1,
-    x:0,
-    ease:Power1.ease,
-    stagger: element.dataset.stagger,
-    delay: element.dataset.delay,
-    scrollTrigger: {
-      trigger: element,
-      start: "top 80%",
-      toggleActions: "play none none none",
-      //markers: true,
-      id: "animated list"
-    }
-    });
-  });
-
-	// Characters reveal
-  jQuery(document).ready(function(){
-    const mySplitText = new SplitText("[data-animation='chars']", {type:"words,chars", wordsClass:"word"})
-    const chars = mySplitText.chars;
-
-    const splitTextElements = gsap.utils.toArray("[data-animation='chars']");
-    splitTextElements.forEach((element) => {
-      gsap.to(element.querySelectorAll('.word div'), {
-        duration: 0.8,
-        y:0,
-        ease:Power4.easeOut,
+    // List child stagger reveal
+    const animatedList = gsap.utils.toArray("[data-animation='animated-list']");
+    animatedList.forEach((element) => {
+        gsap.to(element.querySelectorAll('li'), {
+        opacity: 1,
+        x:0,
+        ease:Power1.ease,
         stagger: element.dataset.stagger,
         delay: element.dataset.delay,
         scrollTrigger: {
-          trigger: element,
-          start: "top 80%",
-          toggleActions: "play none none none",
-          //markers: true,
-          //id: "reveal",
+        trigger: element,
+        start: "top 80%",
+        toggleActions: "play none none none",
+        //markers: true,
+        id: "animated list"
         }
-      });
+        });
     });
-  });
 
-	// Words reveal
-  jQuery(document).ready(function(){
-    const mySplitText2 = new SplitText("[data-animation='words']", {type:"words,lines", linesClass:"line"})
-    const chars2 = mySplitText2.words;
+        // Characters reveal
+    jQuery(document).ready(function(){
+        const mySplitText = new SplitText("[data-animation='chars']", {type:"words,chars", wordsClass:"word"})
+        const chars = mySplitText.chars;
 
-    const splitTextElements2 = gsap.utils.toArray("[data-animation='words']");
-    splitTextElements2.forEach((element) => {
-      gsap.to(element.querySelectorAll('.line div'), {
-        duration: 0.8,
-        y:0,
-        ease:Power4.easeOut,
-        stagger: element.dataset.stagger,
-        delay: element.dataset.delay,
-        scrollTrigger: {
-          trigger: element,
-          start: "top 80%",
-          toggleActions: "play none none none",
-          //markers: true,
-          //id: "reveal"
-        }
-      });
+        const splitTextElements = gsap.utils.toArray("[data-animation='chars']");
+        splitTextElements.forEach((element) => {
+        gsap.to(element.querySelectorAll('.word div'), {
+            duration: 0.8,
+            y:0,
+            ease:Power4.easeOut,
+            stagger: element.dataset.stagger,
+            delay: element.dataset.delay,
+            scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            //markers: true,
+            //id: "reveal",
+            }
+        });
+        });
     });
-  });
+
+        // Words reveal
+    jQuery(document).ready(function(){
+        const mySplitText2 = new SplitText("[data-animation='words']", {type:"words,lines", linesClass:"line"})
+        const chars2 = mySplitText2.words;
+
+        const splitTextElements2 = gsap.utils.toArray("[data-animation='words']");
+        splitTextElements2.forEach((element) => {
+        gsap.to(element.querySelectorAll('.line div'), {
+            duration: 0.8,
+            y:0,
+            ease:Power4.easeOut,
+            stagger: element.dataset.stagger,
+            delay: element.dataset.delay,
+            scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            toggleActions: "play none none none",
+            //markers: true,
+            //id: "reveal"
+            }
+        });
+        });
+    });
 
 });
 
@@ -410,27 +420,27 @@ jQuery(document).ready(function(){
 // Scroll triggers - CTA Reveal
 // ********************************
 jQuery(document).ready(function(){
-  let ctaContainer = document.querySelector(".cta_footer--container");;
-  let ctaTimeline = gsap.timeline({
+    let ctaContainer = document.querySelector(".cta_footer--container");;
+    let ctaTimeline = gsap.timeline({
 
-  scrollTrigger: {
-      trigger: ctaContainer,
-      start: "top 80%",
-      //end: "+=100%",
-      end: "bottom bottom",
-      scrub: true,
-      //markers: true,
-      id: "cta reveal"
-    }
-  });
-  ctaTimeline.fromTo(
-    ctaContainer,
-    {
-      y: -250,
-      opacity: 1
-    },
-    {
-     	y: 0,
-      opacity: 1
-    })
+    scrollTrigger: {
+        trigger: ctaContainer,
+        start: "top 80%",
+        //end: "+=100%",
+        end: "bottom bottom",
+        scrub: true,
+        //markers: true,
+        id: "cta reveal"
+        }
+    });
+    ctaTimeline.fromTo(
+        ctaContainer,
+        {
+        y: -250,
+        opacity: 1
+        },
+        {
+            y: 0,
+        opacity: 1
+        })
 });
