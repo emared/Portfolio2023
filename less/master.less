@@ -410,16 +410,25 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 }
 
 /*  ---  ABOUT PAGE  ---  */
-.about_intro--wrapper .inner--container .grid{padding-top: 120px; padding-bottom: 300px;
-    h1{font-size:220px; line-height: 0.8; grid-column: e("1 / 13"); margin-bottom: 40px;}
-    .size-20{grid-column: e("2 / 7");}
+.about_intro--wrapper{
+    .inner--container{z-index: 2;
+        .grid{padding-top: 180px; padding-bottom: 300px;
+            h1{font-size:220px; line-height: 0.8; grid-column: e("1 / 13"); margin-bottom: 40px;}
+            .size-20{grid-column: e("2 / 7");}
+        }
+    }
+    .video--container{position: absolute; right: 0; max-width: 55vw; width: 100%; z-index: 0;
+        img{width: 100%; height: auto;}
+    }
 }
-.about_text--wrapper .inner--container .grid{padding-bottom: 250px;
-    h3{grid-column: e("2 / 11");}
-    .big-text{grid-column: e("2 / 11"); margin-bottom: 40px;}
-    .size-20{grid-column: e("2 / 9");}
+.about_text--wrapper{background-color: transparent;
+    .inner--container .grid{padding-top: 100px; padding-bottom: 180px;
+        h3{grid-column: e("2 / 11");}
+        .big-text{grid-column: e("2 / 11"); margin-bottom: 40px;}
+        .size-20{grid-column: e("2 / 9");}
+    }
 }
-.about_resume--wrapper .inner--container .grid{padding-top: 100px; padding-bottom: 300px;
+.about_resume--wrapper .inner--container .grid{padding-top: 100px; padding-bottom: 200px;
     > div{grid-column: e("7 / 13");}
     .resume{list-style-type: none;
         li{padding: 30px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-end; justify-content: space-between; color: #bcbcbc; font-size: 18px; line-height: 1.5;
@@ -430,6 +439,61 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
         }
     }
     .btn-container{text-align: right;}
+}
+.logos_marquee--wrapper{
+    &.spacing_bottom{padding-bottom: 300px;}
+}
+
+/*  ---  Marquee  ---  */
+.marquee {overflow: hidden; position: relative; width: 100vw; height: calc(170px + 4rem);
+	& img {object-fit: cover; max-height: 240px; display: block; width: 100%;}
+}
+.track {height: 100%; overflow: hidden; padding: 0; position: absolute; white-space: nowrap;
+	& .item {animation: marquee 25000ms linear infinite; align-items: center; display: inline-flex; will-change: transform;
+		&.-r {animation-name: marquee-r;}
+		&.-twox {animation-duration: 12500ms;}
+	}
+}
+@keyframes marquee {
+	from {transform: translateX(0);}
+	to {transform: translateX(-100%);}
+}
+
+@keyframes marquee-r {
+	from {transform: translateX(-100%);}
+	to {transform: translateX(0);}
+}
+
+/*  ---  Media Queries  ---  */
+@media screen and (max-width: 1050px) {
+    .about_intro--wrapper .inner--container .grid{padding-top: 140px; padding-bottom: 240px;
+        h1{font-size: 170px;}
+    }
+    .about_text--wrapper .big-text{font-size: 30px;}
+    .about_text--wrapper .inner--container .grid{padding-bottom: 120px;}
+    .about_resume--wrapper .inner--container .grid>div{grid-column: 6 / 13;}
+}
+@media screen and (max-width: 800px) {
+    .about_intro--wrapper{display: flex; flex-direction: column;
+        .inner--container .grid{padding-top: 50px; padding-bottom: 30px;}
+        .video--container{position: relative; right: initial; max-width: 100%;}
+    }
+    .about_text--wrapper .inner--container .grid .size-20 {grid-column: 2 / 11;}
+    .about_resume--wrapper .inner--container .grid>div {grid-column: 2 / 13;}
+    .marquee{height: calc(160px + 2rem);
+        img{max-height: 190px;}
+    }
+}
+@media screen and (max-width: 550px) {
+    .about_intro--wrapper .inner--container .grid .size-20 {grid-column: 2 / 13;}
+    .about_text--wrapper .inner--container .grid h3,
+    .about_text--wrapper .inner--container .grid .big-text,
+    .about_text--wrapper .inner--container .grid .size-20,
+    .about_resume--wrapper .inner--container .grid>div {grid-column: 1 / 13;}
+    .marquee{height: calc(80px + 2rem);
+        img{max-height: 110px;}
+    }
+    .logos_marquee--wrapper.spacing_bottom {padding-bottom: 200px;}
 }
 
 /*  ---  PLAYGROUND  ---  */
