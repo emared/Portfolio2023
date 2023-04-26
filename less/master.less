@@ -536,8 +536,9 @@ body .has-html5video .fancybox__content {width: 100%; height: 100%;}
     .playground_images--wrapper .grid_playground .single:nth-of-type(9n+9){grid-column-start: 4; grid-column-end: 4; max-width: 12vw; justify-self: end;}
 }
 @media screen and (max-width: 950px) {
-    .playground_images--wrapper .grid_playground{grid-template-columns: 1fr 1fr;
-
+    .playground_images--wrapper .grid_playground{grid-template-columns: 1fr 1fr; column-gap: 20px;
+        .single:nth-of-type(4n+1){max-width: 85%;}
+        .single:nth-of-type(4n+4){max-width: 85%; margin-left: auto;}
     }
 }
 @media screen and (max-width: 760px) {

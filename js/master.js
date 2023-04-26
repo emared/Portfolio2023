@@ -109,12 +109,23 @@ $(window).resize(function() {
 
 
 // ********************************
-// Mobile menu click
+// Mobile menu toggle
 // ********************************
 $('.hamburger_btn').click(function() {
 	$('body').toggleClass('nav-active');
   // lenis.stop()
 	$(this).toggleClass('open');
+});
+
+
+// ********************************
+// Close mobile menu after click
+// ********************************
+jQuery(document).ready(function($) {
+    $('body .mobile_menu a').on('click', function() {
+        $('body').removeClass('nav-active');
+        $('.hamburger_btn').removeClass('open');
+    })
 });
 
 
