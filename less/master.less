@@ -446,12 +446,12 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 
 /*  ---  Marquee  ---  */
 .marquee {overflow: hidden; position: relative; width: 100vw; height: calc(170px + 4rem);
-	& img {object-fit: cover; max-height: 240px; display: block; width: 100%;}
+	& img {object-fit: cover; max-width: 400px; height: auto; display: block; padding: 0 50px;}
 }
 .track {height: 100%; overflow: hidden; padding: 0; position: absolute; white-space: nowrap;
-	& .item {animation: marquee 25000ms linear infinite; align-items: center; display: inline-flex; will-change: transform;
+	& .item {animation: marquee 50000ms linear infinite; align-items: center; display: inline-flex; will-change: transform;
 		&.-r {animation-name: marquee-r;}
-		&.-twox {animation-duration: 12500ms;}
+		&.-twox {animation-duration: 25000ms;}
 	}
 }
 @keyframes marquee {
@@ -481,7 +481,7 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
     .about_text--wrapper .inner--container .grid .size-20 {grid-column: 2 / 11;}
     .about_resume--wrapper .inner--container .grid>div {grid-column: 2 / 13;}
     .marquee{height: calc(160px + 2rem);
-        img{max-height: 190px;}
+        img{max-width: 250px; padding: 0 30px;}
     }
 }
 @media screen and (max-width: 550px) {
@@ -491,7 +491,7 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
     .about_text--wrapper .inner--container .grid .size-20,
     .about_resume--wrapper .inner--container .grid>div {grid-column: 1 / 13;}
     .marquee{height: calc(80px + 2rem);
-        img{max-height: 110px;}
+        img{max-width: 180px;}
     }
     .logos_marquee--wrapper.spacing_bottom {padding-bottom: 200px;}
 }
