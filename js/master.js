@@ -296,6 +296,10 @@ const player2 = document.getElementById('gyro');
 if($(player2).length >0 ){
     player2.src = supportsHEVCAlpha() ? 'assets/videos/gyro.mov' : 'assets/videos/gyro.webm';
 }
+const player3 = document.getElementById('abstract_hands');
+if($(player3).length >0 ){
+    player3.src = supportsHEVCAlpha() ? 'assets/videos/abstract_hands.mov' : 'assets/videos/abstract_hands.webm';
+}
 
 
 // ********************************
