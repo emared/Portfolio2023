@@ -296,11 +296,11 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 .home_portfolio--wrapper{min-height: 100vh;
     .featured_projects--container{
         .featured_projects{list-style-type: none; position: relative; display: flex; flex-direction: column; grid-row-gap: 15rem;
-            .single_project{width: 100%; height: 70vh; overflow: hidden; display: flex; align-items: flex-end; position: -webkit-sticky; position: sticky; top:15vh;
+            .single_project{width: 100%; height: 70vh; overflow: hidden; display: flex; align-items: flex-end; position: -webkit-sticky; position: sticky; top:15vh; border-radius: 10px;
                 .project_info--container{position: relative; z-index: 5; display: flex; align-items: flex-end; justify-content: space-between; padding: 0 70px 70px; width: 100%; transition: @transition;
                     .project_title{font-family: 'Coign', sans-serif; font-size: 120px; color: white; text-transform: uppercase; line-height: 0.75;}
                     .project_meta{list-style-type: none;
-                        li{display: inline-block; padding: 10px; border-radius: 99px; border: 1px solid #fff; line-height: 1; margin: 0 5px;
+                        li{display: inline-block; padding: 10px; border-radius: 99px; border: 1px solid #fff; line-height: 1; margin: 0 5px 10px;
                             &:last-child{margin-right: 0px;}
                         }
                     }
@@ -410,10 +410,58 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 }
 
 /*  ---  PROJECT PAGE  ---  */
-.main_portfolio--wrapper{
-    .all_projects--container{
-
+.projects_intro--wrapper{
+    .inner--container{padding-top: 100px; padding-bottom: 100px; text-align: center;
+        h1{font-size:220px; line-height: 0.8; margin-top: 150px; margin-bottom: 0;}
+        p{max-width: 450px; margin: 20px auto 0; line-height: 1.5;}
     }
+}
+.main_portfolio--wrapper{padding-bottom: 300px;
+    .all_projects--container{
+        &.grid{column-gap: 40px; align-items: start;}
+        .single_project{width: 100%; display: flex; align-items: flex-end; flex-direction: column; position: relative; margin: 40px 0; grid-column: e("1 / 13");
+            .project_info--container{position: relative; z-index: 5; display: flex; align-items: flex-end; justify-content: space-between; padding: 30px 0 0; width: 100%; transition: @transition;
+                .project_title{font-size: 25px; color: white;}
+            }
+            .project_picture--container{position: relative; width: 100%; padding-top: 66.66%; border-radius: 10px; overflow: hidden;
+                img{width: 100%; height: 100%; position: absolute; top: 50%; left:50%; transform: translate(-50%,-50%) scale(1); object-fit: cover; transition: @transition; z-index: 1;}
+                .project_meta{list-style-type: none; position: absolute; top: 20px; left: 15px; z-index: 2;
+                    li{display: inline-block; padding: 10px; border-radius: 99px; border: 1px solid #fff; line-height: 1; margin: 0 5px 10px;
+                        &:last-child{margin-right: 0px;}
+                    }
+                }
+            }
+            .project_link{width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 2;}
+
+            &:hover{
+                .project_info--container{padding: 30px 0 0;}
+                .project_picture--container{
+                    img{transform: translate(-50%,-50%) scale(1.2);}
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 751px) {
+    .main_portfolio--wrapper .all_projects--container{
+        .single_project:nth-child(6n+1){grid-column: e("1 / 8");}
+        .single_project:nth-child(6n+2){grid-column: e("8 / 13");}
+        .single_project:nth-child(6n+4){grid-column: e("1 / 6");}
+        .single_project:nth-child(6n+5){grid-column: e("6 / 13");}
+    }
+}
+@media screen and (max-width: 600px) {
+    .projects_intro--wrapper .inner--container h1 {font-size: 150px; margin-top: 60px;}
+    .main_portfolio--wrapper .all_projects--container.grid {column-gap: 20px;}
+    .main_portfolio--wrapper .all_projects--container .single_project {margin: 20px 0;
+        .project_picture--container .project_meta{left: 10px;}
+        .project_info--container{padding: 20px 0 0;
+            .project_title{font-size: 20px;}
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    .projects_intro--wrapper .inner--container h1 {font-size: 120px;}
 }
 
 /*  ---  ABOUT PAGE  ---  */
@@ -454,7 +502,7 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 
 /*  ---  Marquee  ---  */
 .marquee {overflow: hidden; position: relative; width: 100vw; height: calc(170px + 4rem);
-	& img {object-fit: cover; max-width: 400px; height: auto; display: block; padding: 0 50px;}
+	& img {object-fit: cover; max-width: 400px; height: auto; display: block; padding: 0 70px;}
 }
 .track {height: 100%; overflow: hidden; padding: 0; position: absolute; white-space: nowrap;
 	& .item {animation: marquee 50000ms linear infinite; align-items: center; display: inline-flex; will-change: transform;
