@@ -237,7 +237,7 @@ logoAnimation = bodymovin.loadAnimation({
   loop: false,
   autoplay: false,
   // animationData: logoSvgData
-  path: 'json/logo_animation.json'
+  path: '/json/logo_animation.json'
 });
 
 logoAnimation.addEventListener("complete", () => {
