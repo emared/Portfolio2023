@@ -104,6 +104,14 @@ del{opacity: 0.6;}
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {background:#313131;}
 
+/*  ---  BARBA.JS  ---  */
+.fade-leave{opacity: 1;}
+.fade-leave-active{transition: opacity 1s linear 0.3s;}
+.fade-leave-to{opacity: 0;}
+.fade-enter{opacity: 0;}
+.fade-enter-active{transition: opacity 1s linear 0.3s;}
+.fade-enter-to{opacity: 1;}
+
 /*  ---  HEADER  ---  */
 /*  ---  General  ---  */
 #header{width:100%; padding: 35px 50px 0; position: fixed; top:0; left:0; transition: ease transform 0.3s; z-index: 1049;
@@ -300,7 +308,7 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
                 .project_info--container{position: relative; z-index: 5; display: flex; align-items: flex-end; justify-content: space-between; padding: 0 70px 70px; width: 100%; transition: @transition;
                     .project_title{font-family: 'Coign', sans-serif; font-size: 120px; color: white; text-transform: uppercase; line-height: 0.75;}
                     .project_meta{list-style-type: none;
-                        li{display: inline-block; padding: 10px; border-radius: 99px; border: 1px solid #fff; line-height: 1; margin: 0 5px 10px;
+                        li{display: inline-block; padding: 10px 15px; border-radius: 99px; line-height: 1; margin: 0 5px 10px; backdrop-filter: blur(10px); background-color: rgba(0,0,0,.4);
                             &:last-child{margin-right: 0px;}
                         }
                     }
@@ -315,7 +323,7 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
                     .project_info--container{padding: 0 90px 70px;}
                     .project_picture--container{
                         &::after{height: 50%; opacity:.5}
-                        img{transform: translate(-50%,-50%) scale(1.2);}
+                        img{transform: translate(-50%,-50%) scale(1.1);}
                     }
                 }
             }
@@ -420,13 +428,14 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
     .all_projects--container{
         &.grid{column-gap: 40px; align-items: start;}
         .single_project{width: 100%; display: flex; align-items: flex-end; flex-direction: column; position: relative; margin: 40px 0; grid-column: e("1 / 13");
-            .project_info--container{position: relative; z-index: 5; display: flex; align-items: flex-end; justify-content: space-between; padding: 30px 0 0; width: 100%; transition: @transition;
+            .project_info--container{position: relative; z-index: 5; padding: 30px 0 0; width: 100%; transition: @transition;
                 .project_title{font-size: 25px; color: white;}
+                .project_description{margin-top: 10px; opacity: .7;}
             }
             .project_picture--container{position: relative; width: 100%; padding-top: 66.66%; border-radius: 10px; overflow: hidden;
                 img{width: 100%; height: 100%; position: absolute; top: 50%; left:50%; transform: translate(-50%,-50%) scale(1); object-fit: cover; transition: @transition; z-index: 1;}
                 .project_meta{list-style-type: none; position: absolute; top: 20px; left: 15px; z-index: 2;
-                    li{display: inline-block; padding: 10px; border-radius: 99px; border: 1px solid #fff; line-height: 1; margin: 0 5px 10px;
+                    li{display: inline-block; padding: 10px 15px; border-radius: 99px; line-height: 1; margin: 0 5px 10px; backdrop-filter: blur(10px); background-color: rgba(0,0,0,.4);
                         &:last-child{margin-right: 0px;}
                     }
                 }
@@ -436,7 +445,7 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
             &:hover{
                 .project_info--container{padding: 30px 0 0;}
                 .project_picture--container{
-                    img{transform: translate(-50%,-50%) scale(1.2);}
+                    img{transform: translate(-50%,-50%) scale(1.1);}
                 }
             }
         }
