@@ -2,17 +2,17 @@
 // Barba.js 
 // ********************************
 // tell Barba to use the css plugin
-barba.use(barbaCss);
+//barba.use(barbaCss);
 // init Barba
-barba.init({
-    transitions: [
-        {
-            name: 'fade',
-            leave() {},
-            enter() {},
-        }
-    ]
-});
+//barba.init({
+//    transitions: [
+//        {
+//            name: 'fade',
+//            leave() {},
+//            enter() {},
+//        }
+//    ]
+//});
 
 
 // ********************************
@@ -227,7 +227,7 @@ if(window.innerWidth > 540){
 // ********************************
 // Lottie logo
 // ********************************
-/* let containerLogo = document.getElementById('logo_lottie');
+let containerLogo = document.getElementById('logo_lottie');
 let logoAnimation;
 let animationCompleted = true;
 
@@ -249,7 +249,7 @@ containerLogo.addEventListener("mouseover", () => {
     logoAnimation.goToAndPlay(0, true);
     animationCompleted = false;
   }
-});*/
+});
 
 
 // ********************************
@@ -287,15 +287,15 @@ function supportsHEVCAlpha() {
 }
 const player = document.getElementById('cta_video');
 if($(player).length >0 ){
-    player.src = supportsHEVCAlpha() ? 'assets/videos/maneki_neko.mov' : 'assets/videos/maneki_neko.webm';
+    player.src = supportsHEVCAlpha() ? '/assets/videos/maneki_neko.mov' : '/assets/videos/maneki_neko.webm';
 }
 const player2 = document.getElementById('gyro');
 if($(player2).length >0 ){
-    player2.src = supportsHEVCAlpha() ? 'assets/videos/gyro.mov' : 'assets/videos/gyro.webm';
+    player2.src = supportsHEVCAlpha() ? '/assets/videos/gyro.mov' : '/assets/videos/gyro.webm';
 }
 const player3 = document.getElementById('abstract_hands');
 if($(player3).length >0 ){
-    player3.src = supportsHEVCAlpha() ? 'assets/videos/abstract_hands.mov' : 'assets/videos/abstract_hands.webm';
+    player3.src = supportsHEVCAlpha() ? '/assets/videos/abstract_hands.mov' : '/assets/videos/abstract_hands.webm';
 }
 
 
