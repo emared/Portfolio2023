@@ -377,7 +377,7 @@ jQuery(document).ready(function(){
         });
     });
 
-        // Characters reveal
+    // Characters reveal
     jQuery(document).ready(function(){
         const mySplitText = new SplitText("[data-animation='chars']", {type:"words,chars", wordsClass:"word"})
         const chars = mySplitText.chars;
@@ -401,7 +401,7 @@ jQuery(document).ready(function(){
         });
     });
 
-        // Words reveal
+    // Words reveal
     jQuery(document).ready(function(){
         const mySplitText2 = new SplitText("[data-animation='words']", {type:"words,lines", linesClass:"line"})
         const chars2 = mySplitText2.words;
