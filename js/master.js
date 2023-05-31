@@ -432,7 +432,7 @@ jQuery(document).ready(function(){
 // Scroll triggers - CTA Reveal
 // ********************************
 jQuery(document).ready(function(){
-    let ctaContainer = document.querySelector(".cta_footer--container");;
+    let ctaContainer = document.querySelector(".cta_footer--container");
     let ctaTimeline = gsap.timeline({
 
     scrollTrigger: {
@@ -452,7 +452,53 @@ jQuery(document).ready(function(){
         opacity: 1
         },
         {
-            y: 0,
+        y: 0,
         opacity: 1
         })
 });
+
+
+// ********************************
+// Load Webp images
+// ********************************
+function checkWebpSupport() {
+    var webpSupported = false;
+    var webpImage = new Image();
+
+    webpImage.onload = function() {
+        webpSupported = (webpImage.width > 0) && (webpImage.height > 0);
+        replaceImageSources();
+    };
+
+    webpImage.onerror = function() {
+        replaceImageSources();
+    };
+
+    webpImage.src = 'http://2023.emanuelepapale.com/assets/projects/kyi/kill-idols-statue-7.webp'; // Replace with an existing WebP image URL
+
+    function replaceImageSources() {
+        var images = document.getElementsByTagName('img');
+        for (var i = 0; i < images.length; i++) {
+        var image = images[i];
+        var jpgSource = image.getAttribute('data-src-jpg');
+        var webpSource = image.getAttribute('src');
+        
+        if (webpSupported && webpSource && webpSource.toLowerCase().endsWith('.webp')) {
+            // Check if the WebP image exists or returns a 404 error
+            var http = new XMLHttpRequest();
+            http.open('HEAD', webpSource, false);
+            http.send();
+
+            if (http.status === 200) {
+            image.setAttribute('src', webpSource);
+            } else {
+            image.setAttribute('src', jpgSource);
+            }
+        } else if (jpgSource) {
+            image.setAttribute('src', jpgSource);
+        }
+        }
+    }
+}
+
+checkWebpSupport();

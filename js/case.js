@@ -23,22 +23,22 @@ jQuery(document).ready(function(){
 // ********************************
 // Images parallax effect
 // ********************************
-jQuery(document).ready(function(){
-    const playgroundItem = gsap.utils.toArray(".parallax");
-    playgroundItem.forEach((element) => {
-        gsap.to(element.querySelectorAll('img'), {
-            y: "-5%",
-            duration: 0.8,
-            ease:Power4.easeOut,
-            delay: element.dataset.delay,
-            scrollTrigger: {
-                trigger: element,
-                start: "top 80%",
-                scrub: true,
-                toggleActions: "play none none none",
-                //markers: true,
-                //id: "parallax"
-            }
-        });
-    });
-});
+//jQuery(document).ready(function(){
+//    const playgroundItem = gsap.utils.toArray(".parallax");
+//    playgroundItem.forEach((element) => {
+//        gsap.to(element.querySelectorAll('img'), {
+//            y: "-5%",
+//            duration: 0.8,
+//            ease:Power4.easeOut,
+//            delay: element.dataset.delay,
+//            scrollTrigger: {
+//                trigger: element,
+//                start: "top 80%",
+//                scrub: true,
+//                toggleActions: "play none none none",
+//                //markers: true,
+//                //id: "parallax"
+//            }
+//        });
+//    });
+//});
