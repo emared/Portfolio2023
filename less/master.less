@@ -733,6 +733,11 @@ video.full_width{width: 100%; display: block;}
         .col-2.mobile-2 .col{grid-column: span 6;}
         .col-3.mobile-2 .col{grid-column: span 6;}
     }
+    .single_case {
+        .col-2.mobile-1 .col{grid-column: span 12;
+            &:first-child{margin-bottom: 35px;}
+        }
+    }
 }
 @media screen and (max-width: 500px) {
     .single_case_hero--row {padding: 100px 0 100px;}
