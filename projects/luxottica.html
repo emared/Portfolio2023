@@ -56,157 +56,161 @@
 
 </head>
 
-<body data-barba="wrapper" class="projects">
+<body class="single project">
 
     <a class="accessibility skip-to-main" href="#main">Skip to main content</a>
 
     <header id="header">
         <div class="header--container">
-            <a id="logo_lottie" href="/index"></a>
+            <a id="logo_lottie" href="/index" aria-label="Back to the homepage"></a>
             <nav class="main_menu--container">
                 <ul>
-                <li class="menu-item">
-                    <a href="/portfolio" class="">Projects</a>
-                </li>
-                <li class="menu-item">
-                    <a href="/about" class="">About</a>
-                </li>
-                <li class="menu-item">
-                    <a href="/playground" class="">Playground</a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://emared.gumroad.com/" class="" target="_blank">Shop</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#footer" onclick="lenis.scrollTo('#footer')" class="">Contact</a>
-                </li>
+                    <li class="menu-item">
+                        <a href="/portfolio" class="">Projects</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/about" class="">About</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/playground" class="">Playground</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://emared.gumroad.com/" class="" target="_blank">Shop</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#footer" onclick="lenis.scrollTo('#footer')" class="">Contact</a>
+                    </li>
                 </ul>
             </nav>
             <div class="mobile_menu--button">
-                <a class="hamburger_btn" href="javascript:void(0);">
+                <button class="hamburger_btn" href="javascript:void(0);" aria-label="Open mobile menu">
                     <div class="hamburger_icon">
                         <div></div>
                         <div></div>
                     </div>
-                </a>
+                </button>
             </div>
         </div>
     </header>
 
-    <main id="wrapper" data-barba="container">
+    <main id="wrapper" data-barba="wrapper">
 
-        <section class="default_row--container single_project_hero--row">
-            <div class="inner--container">
-                <div class="grid">
-                    <div class="col-intro">
-                        <h1 data-animation="chars" data-delay="0" data-stagger="0.03">Luxottica Instore Apps</h1>
-                        <p data-animation="words" data-delay="0.2" data-stagger="0.03" class="size-20">
-                            I assisted Luxottica in completing multiple projects, including the Face Scan app for in-store tablets, which offers personalized sunglasses recommendations based on facial features. Additionally, I contributed to the development of the Eyecare App, allowing users to upload prescriptions and find nearby stores for glasses and contact lenses.</p>
-                    </div>
-                    <div class="col-summary">
-                        <div class="entry" data-animation="fade-up" data-delay="0">
-                            <span>Services</span>
-                            <span class="size-20">UX/UI Design, Motion Design</span>
+        <div data-barba="container">
+
+            <section class="default_row--container single_case_hero--row">
+                <div class="inner--container">
+                    <div class="grid">
+                        <div class="col-intro">
+                            <h1 data-animation="chars" data-delay="0" data-stagger="0.03">Luxottica Instore Apps</h1>
+                            <p data-animation="words" data-delay="0.2" data-stagger="0.03" class="size-20">
+                                I assisted Luxottica in completing multiple projects, including the Face Scan app for in-store tablets, which offers personalized sunglasses recommendations based on facial features. Additionally, I contributed to the development of the Eyecare App, allowing users to upload prescriptions and find nearby stores for glasses and contact lenses.</p>
                         </div>
-                        <div class="entry" data-animation="fade-up" data-delay="0.2">
-                            <span>Client</span>
-                            <span class="size-20">Luxottica</span>
-                        </div>
-                        <div class="entry" data-animation="fade-up" data-delay="0.4">
-                            <span>Year</span>
-                            <span class="size-20">2021</span>
+                        <div class="col-summary">
+                            <div class="entry" data-animation="fade-up" data-delay="0">
+                                <span>Services</span>
+                                <span class="size-20">UX/UI Design, Motion Design</span>
+                            </div>
+                            <div class="entry" data-animation="fade-up" data-delay="0.2">
+                                <span>Client</span>
+                                <span class="size-20">Luxottica</span>
+                            </div>
+                            <div class="entry" data-animation="fade-up" data-delay="0.4">
+                                <span>Year</span>
+                                <span class="size-20">2021</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="hero_img--container">
-                <div class="hero_img parallax reveal_effect">
-                    <div class="mask"></div>
-                    <img src="/assets/projects/featured_luxottica.jpg" alt="">
+                <div class="hero_img--container">
+                    <div class="hero_img parallax reveal_effect">
+                        <div class="mask"></div>
+                        <img src="/assets/projects/featured_luxottica.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <footer id="footer">
+                <section class="cta_footer--container">
+                    <div class="cta--wrapper">
+                        <div class="cta--container">
+                            <div class="video--container">
+                                <video id="cta_video" width="100%" autoplay muted loop></video>
+                            </div>
+                            <div class="text--container">
+                                <p class="title" data-animation="chars" data-delay="0" data-stagger="0.03">Interested in working together?</p>
+                                <a data-animation="fade-up" class="lovely_button link" href="mailto:info@emanuelepapale.com?subject=Hello%20there!" target="_self" data-delay="0"><span class="text">Drop me an email!</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer--wrapper">
+                        <div class="col">
+                        N 53°53'77.749   E -2°75'84.34
+                        </div>
+                        <div class="col">
+                            <div class="other-links">
+                                <a href="https://www.instagram.com/ema.red/" class="link" target="_blank">Instagram</a> / <a href="https://www.behance.net/EmanuelePapale" class="link" target="_blank">Behance</a> / <a href="https://dribbble.com/EmanuelePapale" class="link" target="_blank">Dribbble</a> / <a href="https://www.linkedin.com/in/emanuelepapale/" class="link" target="_blank">Linkedin</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            Designed and developed by me<br>
+                            ©2023 – All Rights Reserved
+                        </div>
+                    </div>
+                </section>
+            </footer>
+
+            <div class="cursor"><img class="eye" src="/assets/images/check.png"></div>
+            <div class="cursor__pointer"></div>
+
+            <div class="mobile_menu--wrapper">
+                <div class="overlay"></div>
+                <div class="mobile_menu--container">
+                    <div class="inner">
+                        <nav>
+                            <ul class="mobile_menu">
+                                <li>
+                                    <a href="/index" class="">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/portfolio" class="">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="/about" class="">About</a>
+                                </li>
+                                <li>
+                                    <a href="/playground" class="">Playground</a>
+                                </li>
+                                <li>
+                                    <a href="https://emared.gumroad.com/" class="" target="_blank">Shop</a>
+                                </li>
+                                <li>
+                                    <a href="#footer" onclick="lenis.scrollTo('#footer')" class="">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <ul class="social_menu">
+                            <li>
+                                <a href="https://www.instagram.com/ema.red/" target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="https://www.behance.net/EmanuelePapale" target="_blank">Behance</a>
+                            </li>
+                            <li>
+                                <a href="https://dribbble.com/EmanuelePapale" target="_blank">Dribbble</a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/emanuelepapale/" target="_blank">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </section>
+
+        </div>
 
     </main>
 
-    <footer id="footer">
-        <section class="cta_footer--container">
-            <div class="cta--wrapper">
-                <div class="cta--container">
-                    <div class="video--container">
-                        <video id="cta_video" width="100%" autoplay muted loop></video>
-                    </div>
-                    <div class="text--container">
-                        <p class="title" data-animation="chars" data-delay="0" data-stagger="0.03">Interested in working together?</p>
-                        <a data-animation="fade-up" class="lovely_button link" href="/projects" target="_self" data-delay="0"><span class="text">Drop me an email!</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer--wrapper">
-                <div class="col">
-                N 53°53'77.749   E -2°75'84.34
-                </div>
-                <div class="col">
-                    <div class="other-links">
-                        <a href="https://www.instagram.com/ema.red/" class="link" target="_blank">Instagram</a> / <a href="https://www.behance.net/EmanuelePapale" class="link" target="_blank">Behance</a> / <a href="https://dribbble.com/EmanuelePapale" class="link" target="_blank">Dribbble</a> / <a href="https://www.linkedin.com/in/emanuelepapale/" class="link" target="_blank">Linkedin</a>
-                    </div>
-                </div>
-                <div class="col">
-                    Designed and developed by me<br>
-                    ©2023 – All Rights Reserved
-                </div>
-            </div>
-        </section>
-    </footer>
-
     <div class="noise-bg"></div>
-    <div class="cursor"><img src="/assets/images/arrow_up.png" alt=""></div>
-    <div class="cursor__pointer"></div>
-
-    <div class="mobile_menu--wrapper">
-        <div class="overlay"></div>
-        <div class="mobile_menu--container">
-            <div class="inner">
-                <nav>
-                    <ul class="mobile_menu">
-                        <li>
-                            <a href="/index" class="">Home</a>
-                        </li>
-                        <li>
-                            <a href="/portfolio" class="">Projects</a>
-                        </li>
-                        <li>
-                            <a href="/about" class="">About</a>
-                        </li>
-                        <li>
-                            <a href="/playground" class="">Playground</a>
-                        </li>
-                        <li>
-                            <a href="https://emared.gumroad.com/" class="" target="_blank">Shop</a>
-                        </li>
-                        <li>
-                            <a href="#footer" onclick="lenis.scrollTo('#footer')" class="">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-                <ul class="social_menu">
-                    <li>
-                        <a href="https://www.instagram.com/ema.red/" target="_blank">Instagram</a>
-                    </li>
-                    <li>
-                        <a href="https://www.behance.net/EmanuelePapale" target="_blank">Behance</a>
-                    </li>
-                    <li>
-                        <a href="https://dribbble.com/EmanuelePapale" target="_blank">Dribbble</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/emanuelepapale/" target="_blank">Linkedin</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/css"></script>
@@ -216,8 +220,8 @@
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js'></script>
     <script type='text/javascript' src='/js/SplitText.min.js'></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script type='text/javascript' src='/js/master.js'></script>
-    <script type='text/javascript' src='/js/case.js'></script>
 
 </body>
 

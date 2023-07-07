@@ -90,8 +90,10 @@ del{opacity: 0.6;}
 [data-animation='fade-up']{opacity: 0; transform: translateY(25px);}
 [data-animation='fade-down']{opacity: 0; transform: translateY(-25px);}
 [data-animation='animated-list'] li{display: block; opacity: 0; transform: translateX(-25px);}
+[data-animation='chars'] {visibility:hidden;}
 [data-animation='chars'] .word{overflow:hidden;}
 [data-animation='chars'] .word div{transform: translateY(1.25em); will-change: transform;}
+[data-animation='words'] {visibility:hidden;}
 [data-animation='words'] .line{overflow:hidden;}
 [data-animation='words'] .line div{transform: translateY(1.25em); will-change: transform;}
 
@@ -107,10 +109,10 @@ del{opacity: 0.6;}
 
 /*  ---  BARBA.JS  ---  */
 .fade-leave{opacity: 1;}
-.fade-leave-active{transition: opacity 1s linear 0.3s;}
+.fade-leave-active{transition: opacity 0.6s linear 0.3s;}
 .fade-leave-to{opacity: 0;}
 .fade-enter{opacity: 0;}
-.fade-enter-active{transition: opacity 1s linear 0.3s;}
+.fade-enter-active{transition: opacity 0.6s linear 0.3s;}
 .fade-enter-to{opacity: 1;}
 
 /*  ---  HEADER  ---  */
@@ -208,10 +210,12 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 /*  ---  LANDING HERO  ---  */
 .home_hero--wrapper{width: 100%; min-height: 100vh; position: relative; overflow: hidden; display: flex; align-items: center; flex-direction: row; justify-content: center; 
     .home_hero--container{width: 100%; position: relative; transform: translateY(40px);}
-    .hero_heading--container{position: relative; width: 100%; z-index: 1;
+    .hero_heading--container{position: relative; width: 100%; z-index: 1; transform: scale(1); transform-origin: 50% 50%;
         .heading_title{width: 100%; max-width: 70vw; margin: 0 auto; height: 100%;
             &.text{position: relative; z-index: 3;
-                svg{display: block;}
+                svg{display: block;
+                    *{shape-rendering: geometricPrecision;}
+                }
             }
             &.mask{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 2;
                 #letters {display: block; width: 100%; height: 100%;
@@ -483,7 +487,7 @@ body.nav-active .mobile_menu--wrapper{pointer-events: all;
 }
 
 /*  ---  ABOUT PAGE  ---  */
-.about_intro--wrapper{
+.about_intro--wrapper{padding-top: 120px;
     .inner--container{z-index: 2;
         .grid{padding-top: 180px; padding-bottom: 300px;
             h1{font-size:220px; line-height: 0.8; grid-column: e("1 / 13"); margin-bottom: 40px;}
