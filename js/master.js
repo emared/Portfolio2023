@@ -7,14 +7,14 @@
 // ********************************
 // Lenis smooth scrolling
 // ********************************
-let lenis;
 const initSmoothScrolling = () => {
+    let lenis;
     lenis = new Lenis({
 		lerp: 0.08,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 		smoothWheel: true
 	});
-    lenis.on('scroll', () => ScrollTrigger.update());
+    lenis.on('scroll', ScrollTrigger.update);
 	const scrollFn = (time) => {
 		lenis.raf(time);
 		requestAnimationFrame(scrollFn);
@@ -110,67 +110,61 @@ const closeMobileMenu = () => {
 // Custom cursor
 // ********************************
 const cursorFollower = () => {
-    var cursor = $(".cursor"),
-        follower = $(".cursor__pointer");
-    var posX = 0,
-        posY = 0;
-    var mouseX = 0,
-        mouseY = 0;
+    let cursor = document.querySelector('.cursor__pointer');
+    let generalLinks = document.querySelectorAll('.link'); 
+    let projectLinks = document.querySelectorAll('.single_project');
+    let playgroundLinks = document.querySelectorAll('.grid_playground > .single'); 
+    let mouseX = 0;
+    let mouseY = 0;
 
-    TweenMax.to({}, 0.016, {
-    repeat: -1,
-    onRepeat: function() {
-        posX += (mouseX - posX) / 9;
-        posY += (mouseY - posY) / 9;
-        TweenMax.set(follower, {
+    gsap.to({}, 0.016, {
+        repeat: -1,
+        onRepeat: function(){
+            gsap.set(cursor, {
             css: {
-            left: posX - 12,
-            top: posY - 12
+                left: mouseX,
+                top: mouseY,
             }
-        });
-        TweenMax.set(cursor, {
-        css: {
-        left: posX - 2,
-        top: posY - 2
+            })
         }
-        });
-    }
-    });
-    $(document).on("mousemove", function(e) {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
-    });
-    jQuery(document).on("mousemove", function(e) {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
     });
 
-    // Add classes to cursor
-    jQuery(document).ready(function(){
-        jQuery( ".link" ).hover(function() {
-            jQuery(".cursor__pointer").toggleClass( "active" );
+    window.addEventListener('mousemove', (e)=> {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    })
+
+    generalLinks.forEach(link => {
+        link.addEventListener('mousemove', ()=> {
+            cursor.classList.add('active');
         });
-    });
-    jQuery(document).ready(function(){
-        jQuery( ".single_project" ).hover(function() {
-            jQuery(".cursor").toggleClass( "active_projects" );
+    
+        link.addEventListener('mouseleave', ()=> {
+            cursor.classList.remove('active');
         });
-    });
-    jQuery(document).ready(function(){
-        jQuery( ".single_project" ).hover(function() {
-            jQuery(".cursor__pointer").toggleClass( "active_projects" );
+    })
+
+    projectLinks.forEach(link => {
+        link.addEventListener('mousemove', ()=> {
+            cursor.classList.add('active_projects');
+            console.log("Hello world!");
         });
-    });
-    jQuery(document).ready(function(){
-        jQuery( ".grid_playground > .single" ).hover(function() {
-            jQuery(".cursor").toggleClass( "active_playground" );
+    
+        link.addEventListener('mouseleave', ()=> {
+            cursor.classList.remove('active_projects');
         });
-    });
-    jQuery(document).ready(function(){
-        jQuery( ".grid_playground > .single" ).hover(function() {
-            jQuery(".cursor__pointer").toggleClass( "active_playground" );
+    })
+
+    playgroundLinks.forEach(link => {
+        link.addEventListener('mousemove', ()=> {
+            cursor.classList.add('active_playground');
+            console.log("Hello world!");
         });
-    });
+    
+        link.addEventListener('mouseleave', ()=> {
+            cursor.classList.remove('active_playground');
+        });
+    })
 };
 
 
@@ -1241,7 +1235,7 @@ const masterInit = () => {
     fnBrowserDetect();
     mobileCheck();
     closeMobileMenu();
-    cursorFollower();
+    
     magneticMenuItems();
     stickyHeader();
     videoSrcScript();
@@ -1257,6 +1251,8 @@ const masterInit = () => {
 
     playgroundReveal();
     revealEffectAnimation();
+
+    cursorFollower();
 };
 
 
