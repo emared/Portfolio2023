@@ -1028,12 +1028,15 @@ const homeHeroAnimation = () => {
             scrollTrigger: {
                 trigger: ".home_hero--wrapper",
                 start: "top top",
-                end: "+=150%",
+                end: "+=80%",
                 scrub: .3,
                 pin: true,
                 // markers: true,
                 id: "letters"
-            }
+            },
+            onComplete: () =>{
+                ScrollTrigger.refresh(true)
+             }
 		});
 	}
     let homeHeroTextMove = $(".hero_text--container");
@@ -1228,9 +1231,9 @@ const revealEffectAnimation = () => {
 // ********************************
 const masterInit = () => {
     gsap.registerPlugin(ScrollTrigger);
-    initSmoothScrolling();
     window.scrollTo(0, 0);
-    globalAnimation();
+    initSmoothScrolling()
+    
     mobileScreenHeight();
     fnBrowserDetect();
     mobileCheck();
@@ -1241,18 +1244,19 @@ const masterInit = () => {
     videoSrcScript();
     checkWebpSupport();
     launchFancybox();
-    ctaReveal();
 
     homeHeroGradient();
     homeHeroMask();
     homeHeroAnimation();
     singleProjectAnimation();
     scrollablePortfolioBar();
+    globalAnimation();
+    ctaReveal();
 
     playgroundReveal();
     revealEffectAnimation();
 
-    cursorFollower();
+    cursorFollower();;
 };
 
 
@@ -1263,6 +1267,7 @@ jQuery(document).ready(function(){
     masterInit();
     lottieLogo();
     mobileMenuToggle();
+    ScrollTrigger.refresh();
 });
 
 
@@ -1271,11 +1276,15 @@ jQuery(document).ready(function(){
 // ********************************
 // tell Barba to use the css plugin
 barba.use(barbaCss);
-// init Barba
+// // init Barba
 barba.init({
+    sync: true,
+    debug: false,
+    timeout:7000,
     transitions: [
         {
             name: 'fade',
+            
             leave() {},
             enter() {},
             beforeEnter() {
