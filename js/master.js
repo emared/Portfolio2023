@@ -147,7 +147,6 @@ const cursorFollower = () => {
     projectLinks.forEach(link => {
         link.addEventListener('mousemove', ()=> {
             cursor.classList.add('active_projects');
-            console.log("Hello world!");
         });
     
         link.addEventListener('mouseleave', ()=> {
@@ -158,7 +157,6 @@ const cursorFollower = () => {
     playgroundLinks.forEach(link => {
         link.addEventListener('mousemove', ()=> {
             cursor.classList.add('active_playground');
-            console.log("Hello world!");
         });
     
         link.addEventListener('mouseleave', ()=> {
@@ -1267,7 +1265,6 @@ jQuery(document).ready(function(){
     masterInit();
     lottieLogo();
     mobileMenuToggle();
-    ScrollTrigger.refresh();
 });
 
 
