@@ -7,6 +7,8 @@ RewriteRule ^(.*)$ $1.html [NC,L]
 RewriteCond %{THE_REQUEST} \.html
 RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
+ErrorDocument 404 /404.html
+
 <IfModule mod_headers.c>
 Header set Cache-Control "private"
 </IfModule>

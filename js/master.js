@@ -7,8 +7,8 @@
 // ********************************
 // Lenis smooth scrolling
 // ********************************
+let lenis;
 const initSmoothScrolling = () => {
-    let lenis;
     lenis = new Lenis({
 		lerp: 0.08,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -999,7 +999,7 @@ const homeHeroMask = () => {
             y:"-100%",
             ease:Power4.easeOut,
             stagger: element.dataset.stagger,
-            delay: element.dataset.delay,
+            delay: 3.5,
             scrollTrigger: {
             trigger: element,
             start: "top 80%",
@@ -1225,11 +1225,61 @@ const revealEffectAnimation = () => {
 
 
 // ********************************
+// Loading Animation
+// ********************************
+const loadingAnimationScript = () => {
+    var loadingAnimationContainer = document.getElementById("loading_animation");
+    if (loadingAnimationContainer) {
+        var loadingAnimation = bodymovin.loadAnimation({
+            container: loadingAnimationContainer,
+            path: '/json/loading_animation.json',
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            name: "Loading Animation",
+        });
+
+        // Add the "loaded" class to elements with the class "loader_wrapper" after four seconds
+        setTimeout(function() {
+            var loaderWrappers = document.querySelectorAll(".loader_wrapper");
+            if (loaderWrappers) {
+                loaderWrappers.forEach(function(wrapper) {
+                    wrapper.classList.add("loaded");
+                });
+            }
+            document.documentElement.style.overflowY = 'initial';
+        }, 3000);
+    }
+};
+
+
+// ********************************
+// Play all the videos
+// ********************************
+const autoplayVideo = () => {
+    const videos = document.querySelectorAll("video");
+    videos.forEach(video => {
+        video.play();
+    });
+}
+
+// ********************************
+// Play all the videos
+// ********************************
+const setActiveLink = () => {
+    const activeClass = 'is-active';
+    const menu = document.querySelector('.main_menu--container');
+    const links = menu.querySelectorAll('.link');
+    links.forEach(link => {
+        link.classList.toggle(activeClass, link.href === window.location.href);
+    });
+}
+
+// ********************************
 // Master init mate
 // ********************************
 const masterInit = () => {
     gsap.registerPlugin(ScrollTrigger);
-    window.scrollTo(0, 0);
     initSmoothScrolling()
     
     mobileScreenHeight();
@@ -1241,8 +1291,8 @@ const masterInit = () => {
     stickyHeader();
     videoSrcScript();
     checkWebpSupport();
-    launchFancybox();
 
+    loadingAnimationScript();
     homeHeroGradient();
     homeHeroMask();
     homeHeroAnimation();
@@ -1250,11 +1300,14 @@ const masterInit = () => {
     scrollablePortfolioBar();
     globalAnimation();
     ctaReveal();
+    autoplayVideo();
 
     playgroundReveal();
     revealEffectAnimation();
 
-    cursorFollower();;
+    cursorFollower();
+    setActiveLink();
+    launchFancybox();
 };
 
 
@@ -1277,15 +1330,30 @@ barba.use(barbaCss);
 barba.init({
     sync: true,
     debug: false,
-    timeout:7000,
+    preventRunning: true,
+    timeout: 7000,
+    requestError: (trigger, action, url, response) => {
+        if (action === 'click' && response.status && response.status === 404) {
+          barba.go('/404');
+        }
+        return false;
+    },
     transitions: [
         {
             name: 'fade',
             
             leave() {},
-            enter() {},
-            beforeEnter() {
+            enter() {
                 
+            },
+            beforeOnce() {
+                
+            },
+            beforeEnter() {
+                if (history.scrollRestoration) {
+                    history.scrollRestoration = 'manual';
+                }
+                window.scrollTo(0, 0);
             },
             afterEnter() {
                 masterInit();
