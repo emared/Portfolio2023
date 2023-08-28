@@ -53,7 +53,7 @@
 
     <link rel="stylesheet" href="/css/master.min.css">
     <link rel="stylesheet" href="/css/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="/css/fancybox.min.css"/>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SXH584WB3E"></script>
@@ -134,7 +134,7 @@
                 <div class="hero_img--container">
                     <div class="hero_img parallax reveal_effect">
                         <div class="mask"></div>
-                        <img src="/assets/projects/featured_kyi_part2.webp" data-src-jpg="/assets/projects/featured_kyi_part2.jpg" alt="Kill your idols part II statue">
+                        <img class="lazy" src="/assets/projects/featured_kyi_part2.webp" data-src-jpg="/assets/projects/featured_kyi_part2.jpg" alt="Kill your idols part II statue">
                     </div>
                 </div>
             </section>
@@ -144,11 +144,11 @@
                     <div class="grid col-2">
                         <div class="col image reveal_effect" data-delay="0">
                             <div class="mask"></div>
-                            <img src="/assets/projects/kyi/kill-idols-statue-3.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-3.jpg" alt="Kill your idols part II statue">
+                            <img class="lazy" src="/assets/projects/kyi/kill-idols-statue-3.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-3.jpg" alt="Kill your idols part II statue">
                         </div>
                         <div class="col image reveal_effect" data-delay="0.2">
                             <div class="mask"></div>
-                            <img src="/assets/projects/kyi/kill-idols-statue-7.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-7.jpg" alt="Kill your idols part II statue">
+                            <img class="lazy" src="/assets/projects/kyi/kill-idols-statue-7.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-7.jpg" alt="Kill your idols part II statue">
                         </div>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                     <div class="grid col-1">
                         <div class="col image reveal_effect">
                             <div class="mask"></div>
-                            <img src="/assets/projects/kyi/kill-idols-statue-6.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-6.jpg" alt="Kill your idols part II statue">
+                            <img class="lazy" src="/assets/projects/kyi/kill-idols-statue-6.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-6.jpg" alt="Kill your idols part II statue">
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                     <div class="grid col-1">
                         <div class="col image reveal_effect">
                             <div class="mask"></div>
-                            <img src="/assets/projects/kyi/kill-idols-statue-5.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-5.jpg" alt="Kill your idols part II statue">
+                            <img class="lazy" src="/assets/projects/kyi/kill-idols-statue-5.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-5.jpg" alt="Kill your idols part II statue">
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                     <div class="grid col-1">
                         <div class="col image reveal_effect">
                             <div class="mask"></div>
-                            <img src="/assets/projects/kyi/kill-idols-statue-1.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-1.jpg" alt="Kill your idols part II statue">
+                            <img class="lazy" src="/assets/projects/kyi/kill-idols-statue-1.webp" data-src-jpg="/assets/projects/kyi/kill-idols-statue-1.jpg" alt="Kill your idols part II statue">
                         </div>
                     </div>
                 </div>
@@ -193,7 +193,7 @@
                     <p>Ignite Summit 2022</p>
                 </div>
                 <div class="image--container">
-                    <img src="/assets/projects/featured_ignite.webp" data-src-jpg="/assets/projects/featured_ignite.jpg" alt="Ignite summit logo and visual on billboard">
+                    <img class="lazy" src="/assets/projects/featured_ignite.webp" data-src-jpg="/assets/projects/featured_ignite.jpg" alt="Ignite summit logo and visual on billboard">
                 </div>
                 <a href="/projects/ignite-summit-2022" class="project_link link"></a>
             </section>
@@ -280,15 +280,16 @@
 
     <div class="noise-bg"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/css"></script>
-    <script type='text/javascript' src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
-    <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js'></script>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js'></script>
+    <script src="/js/barba.core.min.js"></script>
+    <script src="/js/barba.css.min.js"></script>
+    <script type='text/javascript' src="/js/lenis.min.js"></script>
+    <script type='text/javascript' src="/js/jquery.min.js"></script>
+    <script type='text/javascript' src='/js/gsap.min.js'></script>
+    <script type='text/javascript' src='/js/ScrollTrigger.min.js'></script>
     <script type='text/javascript' src='/js/SplitText.min.js'></script>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.4/lottie_svg.min.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script type='text/javascript' src='/js//lottie_svg.min.js'></script>
+    <script type='text/javascript' src="/js/lazyload.min.js"></script>
+    <script type='text/javascript' src="/js/fancybox.min.js"></script>
     <script type='text/javascript' src='/js/master.min.js'></script>
 
 </body>
