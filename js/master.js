@@ -272,6 +272,10 @@ const videoSrcScript = () => {
     if($(player3).length >0 ){
         player3.src = supportsHEVCAlpha() ? '/assets/videos/abstract_hands.mov' : '/assets/videos/abstract_hands.webm';
     }
+    const player4 = document.getElementById('astronaut');
+    if($(player4).length >0 ){
+        player4.src = supportsHEVCAlpha() ? '/assets/videos/astronaut_1.mov' : '/assets/videos/astronaut_1.webm';
+    }
 };
 
 
