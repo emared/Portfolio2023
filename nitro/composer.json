@@ -1,0 +1,35 @@
+{
+    "name": "nitropack/nitropackcloud-sdk",
+    "description": "Client PHP SDK for NitroPack.io",
+    "type" : "package",
+    "authors": [
+        {
+            "name": "Ivailo Hristov"
+        },
+        {
+            "name": "Simeon Totev"
+        },
+        {
+            "name": "Martin Tsvetkov"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:nitropack/httpclient.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:nitropack/url.git"
+        }
+    ],
+    "require": {
+        "nitropack/httpclient": "dev-master",
+        "nitropack/url": "dev-master"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "NitroPack\\SDK\\" : "NitroPack/SDK/"
+        }
+    }
+}

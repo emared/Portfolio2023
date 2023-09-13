@@ -1,0 +1,18 @@
+/* TEAM (ONE-MAN BAND) */                            
+Your title: Emanuele Papale
+Site: www.emanuelepapale.com
+Instagram: https://www.instagram.com/ema.red/
+Linkedin: https://www.linkedin.com/in/emanuelepapale/
+Location: Amsterdam, The Netherlands.
+
+		
+/* THANKS */
+Name: The great and only Robin van Diesen
+Site: https://robinvandiesen.com/
+Linkedin: https://www.linkedin.com/in/robin-van-diesen/
+
+
+/* SITE */
+Last update: 29 August 2023
+Components: Barba.js, jQuery, ScrollTrigger, Lottie.
+Software: Visual Studio code for the whole development of the website. The design was made in Figma and all the animations are a mix of Cinema 4D and After Effects.

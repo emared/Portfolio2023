@@ -516,6 +516,7 @@ jQuery('#letters .single_letter').each(function(index){
 // ********************************
 gsap.to(".hero_heading--container", {
   scale: 70,
+  force3D: false,
   x: "87%",
   transformOrigin: "center center",
   scrollTrigger: {

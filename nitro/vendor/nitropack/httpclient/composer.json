@@ -1,0 +1,29 @@
+{
+    "name": "nitropack/httpclient",
+    "type": "library",
+    "description": "HttpClient library written in PHP, without relying on cURL nor url_fopen",
+    "keywords": ["php", "http", "client", "library"],
+    "authors": [
+        {"name": "Ivailo Hristov"}
+    ],
+    "autoload": {
+        "psr-4": { "NitroPack\\HttpClient\\": "src/" }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:nitropack/url.git"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit --testdox tests"
+    },
+    "require": {
+        "nitropack/url": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10",
+        "react/http": "^1.8",
+        "react/socket": "^1.12"
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "8c430f8b8d0e51d1aa8a02cbbe9ac12b",
+    "packages": [
+        {
+            "name": "nitropack/httpclient",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:nitropack/httpclient.git",
+                "reference": "549b4e269581e105616e880577193db60628a482"
+            },
+            "require": {
+                "nitropack/url": "dev-master"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^10",
+                "react/http": "^1.8",
+                "react/socket": "^1.12"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NitroPack\\HttpClient\\": "src/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit --testdox tests"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Ivailo Hristov"
+                }
+            ],
+            "description": "HttpClient library written in PHP, without relying on cURL nor url_fopen",
+            "keywords": [
+                "client",
+                "http",
+                "library",
+                "php"
+            ],
+            "time": "2023-04-28T14:56:46+00:00"
+        },
+        {
+            "name": "nitropack/url",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:nitropack/url.git",
+                "reference": "6b9393364893561f29abf5ac16aa7d97f2b3a49d"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NitroPack\\Url\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Ivailo Hristov"
+                }
+            ],
+            "description": "URL manipulation library",
+            "keywords": [
+                "library",
+                "manipulation",
+                "php",
+                "url"
+            ],
+            "time": "2023-03-16T14:26:58+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "nitropack/httpclient": 20,
+        "nitropack/url": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
