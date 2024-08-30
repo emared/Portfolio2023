@@ -101,7 +101,7 @@
                 <div class="hero_img--container">
                     <div class="hero_img parallax reveal_effect">
                         <div class="mask"></div>
-                        <img class="lazy" src="/assets/projects/featured_boss.jpg" alt="">
+                        <img class="lazy" src="/assets/projects/featured_boss.webp" data-src-jpg="/assets/projects/featured_boss.jpg" alt="BOSS web app laptop mockup">
                     </div>
                 </div>
             </section>
@@ -215,12 +215,12 @@
             <section class="default_row--container next-project single_project">
                 <div class="inner--container">
                     <p>Next Project</p>
-                    <p>Strangely Familiar</p>
+                    <p>Luxottica Instore Apps</p>
                 </div>
                 <div class="image--container">
-                    <img class="lazy" src="/assets/projects/featured_strangely_familiar.webp" data-src-jpg="/assets/projects/featured_strangely_familiar.jpg" alt="Strangely Familiar show main visual">
+                    <img class="lazy" src="/assets/projects/featured_luxottica.webp" data-src-jpg="/assets/projects/featured_luxottica.jpg" alt="Luxottica in-store ipad apps mockup">
                 </div>
-                <a href="/projects/strangely-familiar" class="project_link link"></a>
+                <a href="/projects/luxottica" class="project_link link"></a>
             </section>
 
             <?php include "../components/cta.php"; ?>

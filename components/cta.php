@@ -22,7 +22,7 @@
             </div>
             <div class="col">
                 Designed and developed by me<br>
-                ©2023 – All Rights Reserved
+                ©2024 – All Rights Reserved
             </div>
         </div>
     </section>

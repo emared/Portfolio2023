@@ -101,7 +101,7 @@
                 <div class="hero_img--container">
                     <div class="hero_img parallax reveal_effect">
                         <div class="mask"></div>
-                        <img class="lazy" src="/assets/projects/featured_minsk.jpg" alt="">
+                        <img class="lazy" src="/assets/projects/featured_minsk.webp" data-src-jpg="/assets/projects/minsk/minsk_img_003.png" alt="Studio MINSK website laptop mockup">
                     </div>
                 </div>
             </section>

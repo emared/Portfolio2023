@@ -101,7 +101,7 @@
                 <div class="hero_img--container">
                     <div class="hero_img parallax reveal_effect">
                         <div class="mask"></div>
-                        <img class="lazy" src="/assets/projects/featured_rbb.jpg" alt="">
+                        <img class="lazy" src="/assets/projects/featured_rbb.webp" data-src-jpg="/assets/projects/rbb/rbb_img_002.jpg" alt="Rijbewijsbelang web app laptop mockup">
                     </div>
                 </div>
             </section>

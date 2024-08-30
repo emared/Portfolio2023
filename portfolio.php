@@ -149,21 +149,21 @@
                             </div>
                             <a href="/projects/how-many-animals" class="project_link"></a>
                         </div>
-    
-                        <!--LUXOTTICA-->
+
+                        <!--INVEST INTERNATIONAL-->
                         <div class="single_project" data-animation="fade-up" data-delay="0">
                             <div class="project_picture--container">
                                 <ul class="project_meta">
-                                    <li>UX/UI Design</li>
-                                    <li>Motion Design</li>
+                                    <li>UI Design</li>
+                                    <li>Design System</li>
                                 </ul>
-                                <img class="lazy" src="/assets/projects/featured_luxottica.webp" srcset="/assets/projects/featured_luxottica_XS.webp 600w, /assets/projects/featured_luxottica.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_luxottica.jpg" alt="Luxottica in-store ipad apps mockup">
+                                <img class="lazy" src="/assets/projects/featured_invest.webp" srcset="/assets/projects/featured_invest_XS.webp 600w, /assets/projects/featured_invest.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_invest.jpg" alt="Macbook mockup with Invest International website">
                             </div>
                             <div class="project_info--container">
-                                <p class="project_title">Luxottica Instore Apps</p>
-                                <p class="project_description">Helping customers by implementing new features in the in-store apps.</p>
+                                <p class="project_title">Invest International</p>
+                                <p class="project_description">New website design and complete component library</p>
                             </div>
-                            <a href="/projects/luxottica" class="project_link"></a>
+                            <a href="/projects/invest-international" class="project_link"></a>
                         </div>
     
                         <!--KILL YOUR IDOLS-->
@@ -213,6 +213,22 @@
                             </div>
                             <a href="/projects/boss" class="project_link"></a>
                         </div>
+
+                        <!--LUXOTTICA-->
+                        <div class="single_project" data-animation="fade-up" data-delay="0">
+                            <div class="project_picture--container">
+                                <ul class="project_meta">
+                                    <li>UX/UI Design</li>
+                                    <li>Motion Design</li>
+                                </ul>
+                                <img class="lazy" src="/assets/projects/featured_luxottica.webp" srcset="/assets/projects/featured_luxottica_XS.webp 600w, /assets/projects/featured_luxottica.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_luxottica.jpg" alt="Luxottica in-store ipad apps mockup">
+                            </div>
+                            <div class="project_info--container">
+                                <p class="project_title">Luxottica Instore Apps</p>
+                                <p class="project_description">Helping customers by implementing new features in the in-store apps</p>
+                            </div>
+                            <a href="/projects/luxottica" class="project_link"></a>
+                        </div>
                         
                         <!--STRANGELY FAMILIAR-->
                         <div class="single_project" data-animation="fade-up" data-delay="0">
@@ -229,7 +245,7 @@
                             </div>
                             <a href="/projects/strangely-familiar" class="project_link"></a>
                         </div>
-    
+
                         <!--MIRKO ZEPPIERI-->
                         <div class="single_project" data-animation="fade-up" data-delay="0">
                             <div class="project_picture--container">

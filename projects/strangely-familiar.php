@@ -101,7 +101,7 @@
                 <div class="hero_img--container">
                     <div class="hero_img parallax reveal_effect">
                         <div class="mask"></div>
-                        <img class="lazy" src="/assets/projects/featured_strangely_familiar.jpg" alt="">
+                        <img class="lazy" src="/assets/projects/featured_strangely_familiar.webp" data-src-jpg="/assets/projects/featured_strangely_familiar.jpg" alt="Strangely Familiar show main visual">
                     </div>
                 </div>
             </section>

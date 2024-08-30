@@ -101,7 +101,7 @@
                 <div class="hero_img--container">
                     <div class="hero_img parallax reveal_effect">
                         <div class="mask"></div>
-                        <img class="lazy" src="/assets/projects/featured_abn_wtt.jpg" alt="ABN AMRO World Tennis Tournament 2020 main visual">
+                        <img class="lazy" src="/assets/projects/featured_abn_wtt.webp" data-src-jpg="/assets/projects/featured_abn_wtt.jpg" alt="ABN AMRO World Tennis Tournament 2020 main visual">
                     </div>
                 </div>
             </section>

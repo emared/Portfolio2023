@@ -101,7 +101,7 @@
                 <div class="hero_img--container">
                     <div class="hero_img parallax reveal_effect">
                         <div class="mask"></div>
-                        <img class="lazy" src="/assets/projects/featured_ignite.jpg" alt="">
+                        <img class="lazy" src="/assets/projects/featured_ignite.webp" data-src-jpg="/assets/projects/featured_ignite.jpg" alt="Ignite summit logo and visual on billboard">
                     </div>
                 </div>
             </section>

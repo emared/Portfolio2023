@@ -134,6 +134,19 @@ include_once "nitro/booster.php";
                         <div class="featured_projects">
                             <div class="single_project">
                                 <div class="project_info--container">
+                                    <p class="project_title">Studio MINSK</p>
+                                    <ul class="project_meta">
+                                    <li>UX/UI Design</li>
+                                    <li>Frontend Development</li>
+                                    </ul>
+                                </div>
+                                <div class="project_picture--container">
+                                    <img class="lazy" src="/assets/projects/featured_minsk.webp" srcset="/assets/projects/featured_minsk_XS.webp 600w, /assets/projects/featured_minsk.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_minsk.jpg" alt="Studio MINSK website laptop mockup">
+                                </div>
+                                <a href="/projects/studio-minsk" class="project_link" aria-label="Read more about this case study"></a>
+                            </div>
+                            <div class="single_project">
+                                <div class="project_info--container">
                                     <p class="project_title">Clavi App</p>
                                     <ul class="project_meta">
                                     <li>Branding</li>
@@ -144,19 +157,6 @@ include_once "nitro/booster.php";
                                     <img class="lazy" src="/assets/projects/featured_clavi.webp" srcset="/assets/projects/featured_clavi_XS.webp 600w, /assets/projects/featured_clavi.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_clavi.jpg" alt="Clavi App phone mockup">
                                 </div>
                                 <a href="/projects/clavi" class="project_link" aria-label="Read more about this case study"></a>
-                            </div>
-                            <div class="single_project">
-                                <div class="project_info--container">
-                                    <p class="project_title">Luxottica Instore Apps</p>
-                                    <ul class="project_meta">
-                                    <li>UX/UI Design</li>
-                                    <li>Motion Design</li>
-                                    </ul>
-                                </div>
-                                <div class="project_picture--container">
-                                    <img class="lazy" src="/assets/projects/featured_luxottica.webp" srcset="/assets/projects/featured_luxottica_XS.webp 600w, /assets/projects/featured_luxottica.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_luxottica.jpg" alt="Luxottica in-store ipad apps mockup">
-                                </div>
-                                <a href="/projects/luxottica" class="project_link" aria-label="Read more about this case study"></a>
                             </div>
                             <div class="single_project">
                                 <div class="project_info--container">
@@ -173,16 +173,28 @@ include_once "nitro/booster.php";
                             </div>
                             <div class="single_project">
                                 <div class="project_info--container">
-                                    <p class="project_title">Studio MINSK</p>
+                                    <p class="project_title">Invest International</p>
                                     <ul class="project_meta">
                                     <li>UX/UI Design</li>
-                                    <li>Frontend Development</li>
                                     </ul>
                                 </div>
                                 <div class="project_picture--container">
-                                    <img class="lazy" src="/assets/projects/featured_minsk.webp" srcset="/assets/projects/featured_minsk_XS.webp 600w, /assets/projects/featured_minsk.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_minsk.jpg" alt="Studio MINSK website laptop mockup">
+                                    <img class="lazy" src="/assets/projects/featured_invest.webp" srcset="/assets/projects/featured_invest_XS.webp 600w, /assets/projects/featured_invest.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_invest.jpg" alt="Macbook mockup with Invest International website">
                                 </div>
-                                <a href="/projects/studio-minsk" class="project_link" aria-label="Read more about this case study"></a>
+                                <a href="/projects/invest-international" class="project_link" aria-label="Read more about this case study"></a>
+                            </div>
+                            <div class="single_project">
+                                <div class="project_info--container">
+                                    <p class="project_title">Luxottica Instore Apps</p>
+                                    <ul class="project_meta">
+                                    <li>UX/UI Design</li>
+                                    <li>Motion Design</li>
+                                    </ul>
+                                </div>
+                                <div class="project_picture--container">
+                                    <img class="lazy" src="/assets/projects/featured_luxottica.webp" srcset="/assets/projects/featured_luxottica_XS.webp 600w, /assets/projects/featured_luxottica.webp 1000w" sizes="(max-width: 600px) 100vw, 50vw" data-src-jpg="/assets/projects/featured_luxottica.jpg" alt="Luxottica in-store ipad apps mockup">
+                                </div>
+                                <a href="/projects/luxottica" class="project_link" aria-label="Read more about this case study"></a>
                             </div>
                             <div class="single_project">
                                 <div class="project_info--container">

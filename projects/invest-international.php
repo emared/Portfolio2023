@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en" prefix="og: http://ogp.me/ns#" class="no-js">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>
-        Clavi App | Emanuele Papale
+        Invest International | Emanuele Papale
     </title>
 
     <meta name="description"
-        content="Clavi is an innovative hardware wallet designed to securely store all your Web3 assets." />
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
 
-    <link rel="canonical" href="https://emanuelepapale.com/projects/clavi" />
-    <link rel="alternate" hreflang="en" href="https://emanuelepapale.com/projects/clavi" />
+    <link rel="canonical" href="https://emanuelepapale.com/projects/abn-wtt-2020" />
+    <link rel="alternate" hreflang="en" href="https://emanuelepapale.com/projects/abn-wtt-2020" />
 
     <link rel="shortcut icon" href="/assets/favicons/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicons/apple-icon-57x57.png">
@@ -33,19 +33,19 @@
     <meta property="og:locale" content="en_GB" />
     <meta property="og:type" content="website" />
 
-    <meta property="og:title" content="Clavi App | Emanuele Papale" />
+    <meta property="og:title" content="Invest International | Emanuele Papale" />
     <meta property="og:description"
-        content="Clavi is an innovative hardware wallet designed to securely store all your Web3 assets." />
-    <meta property="og:url" content="https://emanuelepapale.com/projects/clavi" />
-    <meta property="og:site_name" content="Clavi App | Emanuele Papale" />
-    <meta property="og:image" content="/assets/projects/clavi/og_clavi.jpg" />
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
+    <meta property="og:url" content="https://emanuelepapale.com/projects/abn-wtt-2020" />
+    <meta property="og:site_name" content="Invest International | Emanuele Papale" />
+    <meta property="og:image" content="/assets/projects/abn/og_invest.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="photo" />
-    <meta name="twitter:url" content="https://emanuelepapale.com/projects/clavi" />
-    <meta name="twitter:description" content="Clavi is an innovative hardware wallet designed to securely store all your Web3 assets." />
-    <meta name="twitter:title" content="Clavi App | Emanuele Papale" />
-    <meta name="twitter:image" content="/assets/projects/clavi/og_clavi.jpg" />
+    <meta name="twitter:url" content="https://emanuelepapale.com/projects/abn-wtt-2020" />
+    <meta name="twitter:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit" />
+    <meta name="twitter:title" content="Invest International | Emanuele Papale" />
+    <meta name="twitter:image" content="/assets/projects/abn/og_invest.jpg" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noodp">
@@ -79,21 +79,22 @@
                 <div class="inner--container">
                     <div class="grid">
                         <div class="col-intro">
-                            <h1 data-animation="chars" data-delay="0" data-stagger="0.03">Clavi App</h1>
-                            <p data-animation="words" data-delay="0.2" data-stagger="0.03" class="size-20">Clavi is an innovative hardware wallet designed to securely store all your Web3 assets. I have been entrusted with the task of establishing their brand identity and designing their web application. The web app will feature a highly customizable dashboard, offering a wide range of widgets to cater to your specific needs.</p>
+                            <h1 data-animation="chars" data-delay="0" data-stagger="0.03">Invest International</h1>
+                            <p data-animation="words" data-delay="0.2" data-stagger="0.03" class="size-20">In this project, I had the opportunity to take full leadership of the UI redesign for Invest International’s website, working closely with a UX design agency to ensure a seamless user experience. My role involved not only redesigning the website but also developing a comprehensive design system for the website’s page builder, enabling consistent and efficient updates moving forward.</p>
                         </div>
                         <div class="col-summary">
                             <div class="entry" data-animation="fade-up" data-delay="0">
                                 <span>Services</span>
-                                <span class="size-20">Branding, UX/UI Design</span>
+                                <span class="size-20">UI Design</span>
+                                <span class="size-20">Design System</span>
                             </div>
                             <div class="entry" data-animation="fade-up" data-delay="0.2">
                                 <span>Client</span>
-                                <span class="size-20">Clavi</span>
+                                <span class="size-20">Invest International</span>
                             </div>
                             <div class="entry" data-animation="fade-up" data-delay="0.4">
                                 <span>Year</span>
-                                <span class="size-20">2022</span>
+                                <span class="size-20">2024</span>
                             </div>
                         </div>
                     </div>
@@ -101,29 +102,17 @@
                 <div class="hero_img--container">
                     <div class="hero_img parallax reveal_effect">
                         <div class="mask"></div>
-                        <img class="lazy" src="/assets/projects/featured_clavi.webp" data-src-jpg="/assets/projects/featured_clavi.jpg" alt="Clavi App phone mockup">
+                        <img class="lazy" src="/assets/projects/featured_invest.webp" data-src-jpg="/assets/projects/featured_invest.jpg" alt="Macbook mockup with Invest International website">
                     </div>
                 </div>
             </section>
-
-            <section class="default_row--container single_case remove-top remove-bottom">
-                <div class="inner--container">
-                    <h2 data-animation="chars" data-delay="0" data-stagger="0.03" class="case_section_title">Branding</h2>
-                    <div class="grid col-1">
-                        <div class="col image reveal_effect">
-                            <div class="mask"></div>
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_001.webp" data-src-jpg="/assets/projects/clavi/clavi_img_001.jpg" alt="Clavi app icon and mockup">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="default_row--container single_case remove-top remove-bottom" style="padding: 50px 0;">
+    
+            <section class="default_row--container single_case remove-top">
                 <div class="inner--container">
                     <div class="grid col-1">
                         <div class="col image reveal_effect">
                             <div class="mask"></div>
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_002.webp" data-src-jpg="/assets/projects/clavi/clavi_img_002.jpg" alt="Clavi app brand colours">
+                            <img class="lazy" src="/assets/projects/invest/invest_img_001.webp" data-src-jpg="/assets/projects/invest/invest_img_001.jpg" alt="iMac mockup with Invest International website">
                         </div>
                     </div>
                 </div>
@@ -134,48 +123,7 @@
                     <div class="grid col-1">
                         <div class="col image reveal_effect">
                             <div class="mask"></div>
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_003.webp" data-src-jpg="/assets/projects/clavi/clavi_img_003.jpg" alt="Clavi app brand fonts">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="default_row--container single_case remove-top">
-                <div class="inner--container">
-                    <h2 data-animation="chars" data-delay="0" data-stagger="0.03" class="case_section_title">App</h2>
-                    <div class="grid col-1">
-                        <div class="col image" data-animation="fade-up">
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_004.webp" data-src-jpg="/assets/projects/clavi/clavi_img_004.png" alt="Clavi app various phone mockups">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="default_row--container single_case remove-top">
-                <div class="inner--container">
-                    <div class="grid col-1">
-                        <div class="col image" data-animation="fade-up">
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_005.webp" data-src-jpg="/assets/projects/clavi/clavi_img_005.png" alt="Clavi app various phone mockups">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="default_row--container single_case remove-top">
-                <div class="inner--container">
-                    <div class="grid col-1">
-                        <div class="col image" data-animation="fade-up">
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_006.webp" data-src-jpg="/assets/projects/clavi/clavi_img_006.png" alt="Clavi app various phone mockups">
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="default_row--container single_case remove-top">
-                <div class="inner--container">
-                    <div class="grid col-1">
-                        <div class="col image" data-animation="fade-up">
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_007.webp" data-src-jpg="/assets/projects/clavi/clavi_img_007.png" alt="Clavi app various phone mockups">
+                            <img class="lazy" src="/assets/projects/invest/invest_img_002.webp" data-src-jpg="/assets/projects/invest/invest_img_002.jpg" alt="Isometric mockup of several screens of Invest International website">
                         </div>
                     </div>
                 </div>
@@ -186,7 +134,7 @@
                     <div class="grid col-1">
                         <div class="col image reveal_effect">
                             <div class="mask"></div>
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_008.webp" data-src-jpg="/assets/projects/clavi/clavi_img_008.jpg" alt="Clavi app ipad mockup">
+                            <img class="lazy" src="/assets/projects/invest/invest_img_003.webp" data-src-jpg="/assets/projects/invest/invest_img_003.png" alt="Iphone mockup with Invest International website">
                         </div>
                     </div>
                 </div>
@@ -195,22 +143,78 @@
             <section class="default_row--container single_case remove-top">
                 <div class="inner--container">
                     <div class="grid col-1">
-                        <div class="col image" data-animation="fade-up">
-                            <img class="lazy" src="/assets/projects/clavi/clavi_img_009.webp" data-src-jpg="/assets/projects/clavi/clavi_img_009.png" alt="Clavi app phone and laptop mockups">
+                        <div class="col image reveal_effect">
+                            <div class="mask"></div>
+                            <img class="lazy" src="/assets/projects/invest/invest_img_004.webp" data-src-jpg="/assets/projects/invest/invest_img_004.jpg" alt="Iphones mockup with Invest International website">
                         </div>
                     </div>
                 </div>
             </section>
 
+            <section class="default_row--container single_case remove-top">
+                <div class="inner--container">
+                    <div class="grid col-1">
+                        <div class="col image reveal_effect">
+                            <div class="mask"></div>
+                            <img class="lazy" src="/assets/projects/invest/invest_img_005.webp" data-src-jpg="/assets/projects/invest/invest_img_005.jpg" alt="Iphones mockup with Invest International website">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="default_row--container single_case remove-top">
+                <div class="inner--container">
+                    <div class="grid col-1">
+                        <div class="col image reveal_effect">
+                            <div class="mask"></div>
+                            <img class="lazy" src="/assets/projects/invest/invest_img_006.webp" data-src-jpg="/assets/projects/invest/invest_img_006.jpg" alt="Macbook mockup with Invest International website">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="default_row--container single_case remove-top">
+                <div class="inner--container">
+                    <div class="grid col-1">
+                        <div class="col image reveal_effect">
+                            <div class="mask"></div>
+                            <img class="lazy" src="/assets/projects/invest/invest_img_007.webp" data-src-jpg="/assets/projects/invest/invest_img_007.jpg" alt="Invest International brand guidelines typography">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="default_row--container single_case remove-top">
+                <div class="inner--container">
+                    <div class="grid col-1">
+                        <div class="col image reveal_effect">
+                            <div class="mask"></div>
+                            <img class="lazy" src="/assets/projects/invest/invest_img_008.webp" data-src-jpg="/assets/projects/invest/invest_img_008.jpg" alt="Invest International brand guidelines colours">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="default_row--container single_case remove-top">
+                <div class="inner--container">
+                    <div class="grid col-1">
+                        <div class="col image reveal_effect">
+                            <div class="mask"></div>
+                            <img class="lazy" src="/assets/projects/invest/invest_img_009.webp" data-src-jpg="/assets/projects/invest/invest_img_009.jpg" alt="Invest International brand guidelines various components">
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
             <section class="default_row--container next-project single_project">
                 <div class="inner--container">
                     <p>Next Project</p>
-                    <p>ABN AMRO World Tennis Tournament</p>
+                    <p>Kill your idols Part II</p>
                 </div>
                 <div class="image--container">
-                    <img class="lazy" src="/assets/projects/featured_abn_wtt.webp" data-src-jpg="/assets/projects/featured_abn_wtt.jpg" alt="ABN AMRO World Tennis Tournament 2020 main visual">
+                    <img class="lazy" src="/assets/projects/featured_kyi_part2.webp" data-src-jpg="/assets/projects/featured_kyi_part2.jpg" alt="Kill your idols part II main visual">
                 </div>
-                <a href="/projects/abn-wtt-2020" class="project_link link"></a>
+                <a href="/projects/kill-your-idols" class="project_link link"></a>
             </section>
 
             <?php include "../components/cta.php"; ?>
