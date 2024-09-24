@@ -103,15 +103,15 @@
                         </div>
                         <div class="single" data-animation="fade-up" data-delay="0.4">
                             <div class="mask"></div>
-                            <a href="/assets/playground/high/billelis_skull_two.jpg" data-fancybox data-barba-prevent>
-                                <img class="lazy" src="/assets/playground/thumbs/billelis_skull_two.webp" data-src-jpg="/assets/playground/thumbs/billelis_skull_two.jpg" alt="Billelis 3D collab artwork">
+                            <a href="/assets/playground/high/making_mistakes.jpg" data-fancybox data-barba-prevent>
+                                <img class="lazy" src="/assets/playground/thumbs/making_mistakes.webp" data-src-jpg="/assets/playground/thumbs/making_mistakes.jpg" alt="3D render of a kintsugi statue">
                             </a>
                         </div>
                         <!-- Row -->
-                        <div class="single" data-animation="fade-up" data-delay="0">
+                        <div class="single" data-animation="fade-up" data-delay="0.4">
                             <div class="mask"></div>
-                            <a href="/assets/playground/high/halloween.jpg" data-fancybox data-barba-prevent>
-                                <img class="lazy" src="/assets/playground/thumbs/halloween.webp" data-src-jpg="/assets/playground/thumbs/halloween.jpg" alt="Halloween surreal artwork">
+                            <a href="/assets/playground/high/billelis_skull_two.jpg" data-fancybox data-barba-prevent>
+                                <img class="lazy" src="/assets/playground/thumbs/billelis_skull_two.webp" data-src-jpg="/assets/playground/thumbs/billelis_skull_two.jpg" alt="Billelis 3D collab artwork">
                             </a>
                         </div>
                         <div class="single" data-animation="fade-up" data-delay="0.2">
@@ -120,13 +120,19 @@
                                 <img class="lazy" src="/assets/playground/thumbs/duality.webp" data-src-jpg="/assets/playground/thumbs/duality.jpg" alt="Duality surreal 3D artwork">
                             </a>
                         </div>
+                        <div class="single" data-animation="fade-up" data-delay="0">
+                            <div class="mask"></div>
+                            <a href="/assets/playground/high/halloween.jpg" data-fancybox data-barba-prevent>
+                                <img class="lazy" src="/assets/playground/thumbs/halloween.webp" data-src-jpg="/assets/playground/thumbs/halloween.jpg" alt="Halloween surreal artwork">
+                            </a>
+                        </div>
+                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0.4">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/muse.jpg" data-fancybox data-barba-prevent>
                                 <img class="lazy" src="/assets/playground/thumbs/muse.webp" data-src-jpg="/assets/playground/thumbs/muse.jpg" alt="Dancing Muse surreal artwork">
                             </a>
                         </div>
-                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/queen.jpg" data-fancybox data-barba-prevent>
@@ -139,13 +145,13 @@
                                 <img class="lazy" src="/assets/playground/thumbs/abduction.webp" data-src-jpg="/assets/playground/thumbs/abduction.jpg" alt="Abduction surreal artwork">
                             </a>
                         </div>
+                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0.4">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/black_hole.jpg" data-fancybox data-barba-prevent>
                                 <img class="lazy" src="/assets/playground/thumbs/black_hole.webp" data-src-jpg="/assets/playground/thumbs/black_hole.jpg" alt="Black Hole surreal artwork">
                             </a>
                         </div>
-                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/demo_03.mp4" data-fancybox data-barba-prevent>
@@ -158,13 +164,13 @@
                                 <img class="lazy" src="/assets/playground/thumbs/demo_01.webp" data-src-jpg="/assets/playground/thumbs/demo_01.jpg" alt="Demo Festival 3D animation">
                             </a>
                         </div>
+                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0.4">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/demo_02.mp4" data-fancybox data-barba-prevent>
                                 <img class="lazy" src="/assets/playground/thumbs/demo_02.webp" data-src-jpg="/assets/playground/thumbs/demo_02.jpg" alt="Demo Festival 3D animation">
                             </a>
                         </div>
-                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/jump.jpg" data-fancybox data-barba-prevent>
@@ -177,13 +183,13 @@
                                 <img class="lazy" src="/assets/playground/thumbs/antarctica.webp" data-src-jpg="/assets/playground/thumbs/antarctica.jpg" alt="Antarctica surreal 3D artwork">
                             </a>
                         </div>
+                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0.4">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/cool_spheres.mp4" data-fancybox data-barba-prevent>
                                 <img class="lazy" src="/assets/playground/thumbs/cool_spheres.webp" data-src-jpg="/assets/playground/thumbs/cool_spheres.jpg" alt="Cool Sphere 3D artwork">
                             </a>
                         </div>
-                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/transparency.mp4" data-fancybox data-barba-prevent>
@@ -196,6 +202,7 @@
                                 <img class="lazy" src="/assets/playground/thumbs/nature.webp" data-src-jpg="/assets/playground/thumbs/nature.jpg" alt="Nature surreal artwork">
                             </a>
                         </div>
+                        <!-- Row -->
                         <div class="single" data-animation="fade-up" data-delay="0.4">
                             <div class="mask"></div>
                             <a href="/assets/playground/high/orange.jpg" data-fancybox data-barba-prevent>
