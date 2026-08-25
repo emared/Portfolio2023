@@ -1,3 +1,5 @@
 sftp.json
 .DS_Store
 **/.DS_Store
+.vercel
+.env*
